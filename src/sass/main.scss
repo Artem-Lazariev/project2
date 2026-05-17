@@ -1,3 +1,32 @@
-body{
-    background-color: #000;
-}
+@use "./base/reset"; 
+@use "./base/var"; 
+@use "./base/common"; 
+@use "./base/container";
+
+
+
+
+@use "./sections/header";
+
+@use "./sections/title";
+@use "./sections/year";
+
+@use "./sections/number"; 
+
+@use "./sections/rps";
+
+@use "./sections/calc";
+@use "./sections/time";
+
+@use "./sections/dino";
+@use "./sections/football";
+
+@use "./sections/maxnumber";
+
+@use "./sections/team";
+@use "./sections/scientists";
+
+
+@use "./sections/footer";
+@use "./sections/menu";
+@use "./sections/thanks";
