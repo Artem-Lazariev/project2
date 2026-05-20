@@ -46,4 +46,15 @@ textarea:focus-visible {
 
 body {
   background-color: #000;
+}
+
+.title {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.title__text {
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=main.css.map */
