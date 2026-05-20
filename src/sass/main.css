@@ -45,16 +45,28 @@ textarea:focus-visible {
 }
 
 body {
-  background-color: #000;
+  font-family: "Montserrat Alternates";
 }
 
-.title {
-  padding-top: 36px;
-  padding-bottom: 36px;
+.container {
+  max-width: 1440px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
-.title__text {
-  color: #000;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: normal;
+@media screen and (min-width: 300px) {
+  .container {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 678px) {
+  .container {
+    width: 678px;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    padding: 0 20px;
+  }
 }/*# sourceMappingURL=main.css.map */
