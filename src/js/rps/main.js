@@ -11,5 +11,5 @@ if (num === pick) {
   }
   if (num === 3 && pick === 1) {
     console.log('player win')
-  }
+  }//
 }
