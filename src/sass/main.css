@@ -48,27 +48,13 @@ body {
   background-color: #000;
 }
 
-.container {
-  max-width: 1440px;
-  padding: 0 10px;
-  margin: 0 auto;
+.title {
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
-@media screen and (min-width: 300px) {
-  .container {
-    width: 300px;
-  }
-}
-@media screen and (min-width: 678px) {
-  .container {
-    width: 678px;
-    padding: 0 15px;
-  }
-}
-@media screen and (min-width: 1320px) {
-  .container {
-    width: 1320px;
-    padding: 0 20px;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */
+.title__text {
+  color: #000;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}/*# sourceMappingURL=main.css.map */
