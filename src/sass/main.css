@@ -44,6 +44,10 @@ textarea:focus-visible {
   box-shadow: none;
 }
 
+body {
+  font-family: "Montserrat Alternates";
+}
+
 .container {
   max-width: 1440px;
   padding: 0 10px;
