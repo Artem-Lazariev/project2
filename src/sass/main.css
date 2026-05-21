@@ -44,10 +44,6 @@ textarea:focus-visible {
   box-shadow: none;
 }
 
-body {
-  background-color: #000;
-}
-
 .container {
   max-width: 1440px;
   padding: 0 10px;
