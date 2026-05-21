@@ -1,18 +1,22 @@
 import { defineConfig } from 'vite'
-import glob from 'glob'
 import injectHTML from 'vite-plugin-html-inject'
 import FullReload from 'vite-plugin-full-reload'
 
 export default defineConfig({
-  define: {
-    global: {},
-  },
+  // Кажемо Vite, що вся робота йде всередині папки src
   root: 'src',
+
   build: {
-    rollupOptions: {
-      input: glob.sync('./src/*.html'),
-    },
+    // Файли після збірки будуть складатися в папку dist на рівень вище
     outDir: '../dist',
+    emptyOutDir: true,
   },
-  plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+
+  plugins: [
+    // Плагін для роботи <load src="..." /> (без аргументів всередині)
+    injectHTML(),
+
+    // Слідкує за абсолютно всіма HTML-файлами в папці src і перезапускає браузер
+    FullReload(['src/**/*.html']),
+  ],
 })
