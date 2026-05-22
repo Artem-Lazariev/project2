@@ -1,8 +1,10 @@
+
 ul {
   margin: 0;
   list-style: none;
   padding: 0;
 }
+
 
 h1,
 h2,
@@ -17,6 +19,7 @@ a {
 }
 
 button {
+          padding: 0;
   border: none;
   cursor: pointer;
 }
