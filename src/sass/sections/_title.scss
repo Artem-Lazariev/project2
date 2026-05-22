@@ -6,7 +6,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-            border-bottom: 1px solid $text-color;
+        flex-direction: column;
+        &::after{
+            content: "";
+            height: 1px;
+            width: 536px;
+            background-color: $text-color;
+        }
     }
 
     &__text{

@@ -1,1 +1,61 @@
-@use "../base/var" as *;
+@use '../base/var' as *;
+.footer {
+  padding: 61px 0 59px 0;
+  &__icon {
+    width: 165px;
+    height: 70px;
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__span {
+    color: $text-color;
+    font-family: Sacramento;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: $text-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-left: 185px;
+    margin-right: auto;
+  }
+  &__email {
+    padding: 10px 80px 10px 10px;
+    border-radius: 20px;
+    background: $bg-color;
+    color: $input-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__btn {
+    padding: 10px;
+    border-radius: 20px;
+    background: $text-color;
+    color: $main-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__subscribe{
+    display: flex;
+    gap: 36px;
+    margin-bottom: 18px;
+  }
+  &__label {
+    color: $text-color;
+    font-size: 6px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

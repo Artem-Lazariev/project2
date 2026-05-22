@@ -1,8 +1,8 @@
-const btnRef = document.querySelector(".header__btn");
-const listRef = document.querySelector(".header__interactive");
-const switchRef = document.querySelector(".header__switcher");
-const rangeRef = document.querySelector(".header__range");
-const iconRef = document.querySelector(".header__theme");
+const btnRef = document.querySelector('.header__btn');
+const listRef = document.querySelector('.header__interactive');
+const switchRef = document.querySelector('.header__switcher');
+const rangeRef = document.querySelector('.header__range');
+const iconRef = document.querySelector('.header__theme');
 const games = [
   {
     id: 1,
@@ -55,12 +55,12 @@ const games = [
     category: 'acquaintance',
   },
 ];
-btnRef.addEventListener("click", (evt) => {
-    listRef.classList.toggle("open");
+btnRef.addEventListener('click', evt => {
+  listRef.classList.toggle('open');
 });
-switchRef.addEventListener("click", (evt) => {
-    rangeRef.classList.toggle("active");
-    if (rangeRef.className === "active") {
-        iconRef.href = '/img/symbol-defs.svg#moon';
-    }
-})
+switchRef.addEventListener('click', evt => {
+  rangeRef.classList.toggle('active');
+  if (rangeRef.className === 'active') {
+    iconRef.href = '/img/symbol-defs.svg#moon';
+  }
+});

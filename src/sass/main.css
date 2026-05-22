@@ -50,11 +50,9 @@ body {
 }
 
 .container {
-  outline: 1px solid red;
   max-width: 1090px;
   padding: 0 10px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 @media screen and (min-width: 300px) {
   .container {
@@ -218,7 +216,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #000;
+  flex-direction: column;
+}
+.title__box::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
 }
 .title__text {
   width: 386px;
@@ -227,4 +231,110 @@ body {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 36px;
+}
+
+.maxnumber {
+  padding-top: 36px;
+}
+.maxnumber__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 36px;
+  margin-bottom: 36px;
+}
+.maxnumber__box::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
+}
+.maxnumber__title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+.maxnumber__subtitle {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.maxnumber__input {
+  color: #7E7E7E;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #D7D7D7;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+}
+.maxnumber__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+}
+
+.footer {
+  padding: 61px 0 59px 0;
+}
+.footer__icon {
+  width: 165px;
+  height: 70px;
+}
+.footer__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__span {
+  color: #000;
+  font-family: Sacramento;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-left: 185px;
+  margin-right: auto;
+}
+.footer__email {
+  padding: 10px 80px 10px 10px;
+  border-radius: 20px;
+  background: #D7D7D7;
+  color: #7E7E7E;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__btn {
+  padding: 10px;
+  border-radius: 20px;
+  background: #000;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__subscribe {
+  display: flex;
+  gap: 36px;
+  margin-bottom: 18px;
+}
+.footer__label {
+  color: #000;
+  font-size: 6px;
+  font-weight: 400;
+  line-height: normal;
 }/*# sourceMappingURL=main.css.map */
