@@ -1,6 +1,7 @@
-
+@use "../base/var" as *;
 .container {
-  max-width: 1440px;
+  outline: 1px solid red;
+  max-width: 1090px;
   padding: 0 10px;
   margin: 0 auto;
 
@@ -13,8 +14,8 @@
     padding: 0 15px;
   }
 
-  @media screen and (min-width: 1440px) {
-    width:1440px;
+  @media screen and (min-width: 1090px) {
+    width:1090px;
     padding: 0 20px;
   }
 }
