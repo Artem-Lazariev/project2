@@ -1,7 +1,29 @@
-<div class="rps-buttons">
-  <button>🪨 Камень (1)</button>
-  <button>✂️ Ножницы (2)</button>
-  <button>📄 Бумага (3)</button>
-</div>
-<p id="output"></p>
-<script src="../js/rps.js"></script>
+<section class="container rps">
+  <h2 class="rps-title">Камінь - ножиці - папір</h2>
+  <div class="rps__info">
+    <div class="rps__buttons">
+      <button>
+        <svg class="rps__icon">
+          <use href="/img/symbol-defs.svg#stone"></use>
+        </svg>
+      </button>
+      <button>
+        <svg class="rps__icon">
+          <use href="/img/symbol-defs.svg#scissors"></use>
+        </svg>
+      </button>
+      <button>
+        <svg class="rps__icon">
+          <use href="/img/symbol-defs.svg#paper"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="rps__result">
+      <p>Рахунок:</p>
+      <p id="rps__loses">Комп’ютер - 0</p>
+      <p id="rps__wins">Ви - 0</p>
+    </div>
+  </div>
+  <p id="rps__output" class="rps__win">win</p>
+  <p id="rps__comp" class="rps__comp"></p>
+</section>
