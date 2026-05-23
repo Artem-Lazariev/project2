@@ -283,6 +283,8 @@ body {
   padding: 10px 20px;
   border-radius: 20px;
   background-color: #000;
+}
+
 .calc {
   padding: 36px 0 0 0;
 }
@@ -338,8 +340,6 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
-  width: 118px;
-  height: 35px;
 }
 .calc__div {
   display: flex;
@@ -464,6 +464,4 @@ body {
   font-size: 6px;
   font-weight: 400;
   line-height: normal;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
