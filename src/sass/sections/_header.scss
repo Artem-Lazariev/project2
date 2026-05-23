@@ -2,6 +2,7 @@
 .header{
     padding: 21px 0;
     &__div{
+                position: relative;
         display: flex;
     }
     &__logo{
@@ -26,7 +27,6 @@ line-height: normal;
         height: 38px;
     }
     &__box{
-        position: relative;
         display: flex;
         flex-direction: column;
     }
@@ -58,8 +58,8 @@ line-height: normal;
     &__interactive{
         background-color: $main-color;
         position: absolute;
-        top: 50px;
-        left: 400px;
+        top: 30px;
+        left: 170px;
         border: 1px solid $text-color;
         border-top: none;
         border-radius: 0 0 20px 20px;
@@ -117,7 +117,6 @@ transition-timing-function: ease;
     &__theme{
         width: 15px;
 height: 15px;
-
     }
     &__list{
         display: flex;
