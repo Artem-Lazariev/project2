@@ -46,6 +46,10 @@ textarea:focus-visible {
 }
 
 body {
+  background-image: url(../img/main-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: "Montserrat Alternates";
 }
 
@@ -73,20 +77,12 @@ body {
 }
 
 .header {
+  background-color: #FFF;
   padding: 21px 0;
 }
 .header__div {
   position: relative;
   display: flex;
-}
-.header__logo {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  color: #000;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
 }
 .header__span {
   color: #000;
@@ -96,12 +92,8 @@ body {
   line-height: normal;
 }
 .header__icon {
-  width: 40px;
+  width: 93px;
   height: 38px;
-}
-.header__box {
-  display: flex;
-  flex-direction: column;
 }
 .header__link {
   color: #000;
@@ -356,6 +348,7 @@ body {
 }
 
 .footer {
+  background-color: #FFF;
   padding: 61px 0 59px 0;
 }
 .footer__icon {

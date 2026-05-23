@@ -1,5 +1,6 @@
 @use '../base/var' as *;
 .footer {
+  background-color: $main-color;
   padding: 61px 0 59px 0;
   &__icon {
     width: 165px;
