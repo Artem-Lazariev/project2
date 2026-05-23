@@ -1,17 +1,10 @@
 @use "../base/var" as *;
 .header{
+    background-color: $main-color;
     padding: 21px 0;
     &__div{
+                position: relative;
         display: flex;
-    }
-    &__logo{
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        color: $text-color;
-font-size: 12px;
-font-weight: 400;
-line-height: normal;
     }
     &__span{
         color: $text-color;
@@ -22,13 +15,9 @@ line-height: normal;
 
     }
     &__icon{
-        width: 40px;
-        height: 38px;
-    }
-    &__box{
-        position: relative;
-        display: flex;
-        flex-direction: column;
+width: 93px;
+height: 38px;
+
     }
 
     &__link{
@@ -58,8 +47,8 @@ line-height: normal;
     &__interactive{
         background-color: $main-color;
         position: absolute;
-        top: 50px;
-        left: 400px;
+        top: 30px;
+        left: 170px;
         border: 1px solid $text-color;
         border-top: none;
         border-radius: 0 0 20px 20px;
@@ -117,7 +106,6 @@ transition-timing-function: ease;
     &__theme{
         width: 15px;
 height: 15px;
-
     }
     &__list{
         display: flex;
