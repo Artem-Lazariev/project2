@@ -12,7 +12,7 @@
     
 
     <script type="module" crossorigin src="/project2/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project2/assets/index-7a524193.css">
+    <link rel="stylesheet" href="/project2/assets/index-e7119190.css">
   </head>
   <body>
     <!-- Loads the specified .html file -->
@@ -20,7 +20,7 @@
   <div class="container header__div">
   <a class="header__logo" href="../index.html">
     <svg class="header__icon">
-      <use href="/project2/assets/symbol-defs-00457036.svg#logotype"></use>
+      <use href="/project2/assets/symbol-defs-f4b8b214.svg#logotype"></use>
     </svg>
   </a>
   <ul class="header__list">
@@ -28,7 +28,7 @@
       <button class="header__btn" type="button">
         Інтерактив
         <svg class="header__strilka">
-          <use href="/project2/assets/symbol-defs-00457036.svg#strilkadown__"></use>
+          <use href="/project2/assets/symbol-defs-f4b8b214.svg#strilkadown__"></use>
         </svg>
       </button>
     </li>
@@ -40,7 +40,7 @@
   <ul class="header__lister">
     <li class="header__itm"><div class="header__switcher">
         <div class="header__range"><svg class="header__theme">
-            <use href="/project2/assets/symbol-defs-00457036.svg#sun"></use>
+            <use href="/project2/assets/symbol-defs-f4b8b214.svg#sun"></use>
         </svg></div>
     </div></li>
     <li class="header__itm"><p class="header__subtitle">Вітаємо, <span class="header__name">User!</span></p></li>
@@ -74,13 +74,35 @@
     </label>
 </section>
       
-      <div class="rps-buttons">
-  <button>🪨 Камень (1)</button>
-  <button>✂️ Ножницы (2)</button>
-  <button>📄 Бумага (3)</button>
-</div>
-<p id="output"></p>
-<script src="../js/rps.js"></script>
+      <section class="container rps">
+  <h2 class="rps-title">Камінь - ножиці - папір</h2>
+  <div class="rps__info">
+    <div class="rps__buttons">
+      <button>
+        <svg class="rps__icon">
+          <use href="/project2/assets/symbol-defs-f4b8b214.svg#stone"></use>
+        </svg>
+      </button>
+      <button>
+        <svg class="rps__icon">
+          <use href="/project2/assets/symbol-defs-f4b8b214.svg#scissors"></use>
+        </svg>
+      </button>
+      <button>
+        <svg class="rps__icon">
+          <use href="/project2/assets/symbol-defs-f4b8b214.svg#paper"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="rps__result">
+      <p>Рахунок:</p>
+      <p id="rps__loses">Комп’ютер - 0</p>
+      <p id="rps__wins">Ви - 0</p>
+    </div>
+  </div>
+  <p id="rps__output" class="rps__win">win</p>
+  <p id="rps__comp" class="rps__comp"></p>
+</section>
       <section class="calc">
     <div class="container calc__box">
         <h2 class="calc__title">Калькулятор</h2>
@@ -126,7 +148,7 @@
     <div class="container footer__box">
   <a class="footer__logo" href="../index.html">
     <svg class="footer__icon">
-      <use href="/project2/assets/symbol-defs-00457036.svg#logotype"></use>
+      <use href="/project2/assets/symbol-defs-f4b8b214.svg#logotype"></use>
     </svg>
   </a>
   <p class="footer__text">
@@ -146,8 +168,26 @@
 
 </div>
 </footer>
-    
-    
+    <section class="menu">
+    <h2 class="menu__subtitle">Привіт!
+Ви потрапили на сайт інтерактивних ігор та завдань
+Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+Бажаємо Вам гарно провести час!</h2>
+    <label class="menu__label">
+        <input type="text" class="menu__input" placeholder="Ваше ім’я...">
+        <button  class="menu__btn">Зберегти</button>
+        Введіть своє ім’я:
+    </label>
+<button class="menu__button" type="button"></button>
+</section>
+    <section class="thanks">
+    <h2 class="thanks__subtitle">Дякую за підписку!</h2>
+<button class="thanks__btn" type="button">
+    <svg class="thanks__icon">
+      <use href="/project2/assets/symbol-defs-f4b8b214.svg#logo"></use>
+    </svg>
+</button>
+</section>
     
   </body>
 </html>
