@@ -1,1 +1,60 @@
 @use "../base/var" as *;
+.rps{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid $text-color;
+  gap: 36px;
+  padding-top: 36px;
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+  &__icon > use {
+    width: 40px;
+    height: 40px;
+  }
+  &__title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: $text-color;
+  }
+  &__info{
+    display: flex;
+    flex-direction: row;
+    gap: 104px;
+  }
+  &__buttons > button{
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: $text-color;
+  }
+  &__green{
+    color: $dynamic-color;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+  &__red{
+       color: $dynamic-color2;
+       font-weight: 400;
+       font-size: 12px;
+       line-height: 100%;
+       letter-spacing: 0;
+  }
+  &__comp{
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: $text-color;
+  }
+}
