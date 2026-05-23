@@ -12,7 +12,7 @@
     
 
     <script type="module" crossorigin src="/project2/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project2/assets/index-e7119190.css">
+    <link rel="stylesheet" href="/project2/assets/index-08092162.css">
   </head>
   <body>
     <!-- Loads the specified .html file -->
@@ -28,7 +28,7 @@
       <button class="header__btn" type="button">
         Інтерактив
         <svg class="header__strilka">
-          <use href="/project2/assets/symbol-defs-f4b8b214.svg#strilkadown__"></use>
+          <use href="../img/symbol-defs.svg#strilka__down"></use>
         </svg>
       </button>
     </li>
@@ -39,9 +39,7 @@
   </ul>
   <ul class="header__lister">
     <li class="header__itm"><div class="header__switcher">
-        <div class="header__range"><svg class="header__theme">
-            <use href="/project2/assets/symbol-defs-f4b8b214.svg#sun"></use>
-        </svg></div>
+        <div class="header__range"><img class="header__theme" src="../img/sun.webp" alt="sun"></div>
     </div></li>
     <li class="header__itm"><p class="header__subtitle">Вітаємо, <span class="header__name">User!</span></p></li>
   </ul>
@@ -67,11 +65,13 @@
    </div>
  </section>
       <section class="year">
+    <div class="container">
     <h2 class="year__subtitle">Перевір в який рік ти народився</h2>
     <label class="year__label">
         <input type="text" class="year__input" placeholder="Введіть рік народження">
         <button class="year__btn">svg</button>
     </label>
+    </div>
 </section>
       
       <section class="container rps">
@@ -121,12 +121,14 @@
     </div>
 </section>
       <section class="time">
+    <div class="container">
     <h2 class="time__subtitle">Калькулятор часу</h2>
     <label class="time__label">
    <input required class="time__input" placeholder="Введіть число" type="text">
    <button class="time__btn" type="button">svg</button>
    </label>
    <p class="time__text">0 дн. 00:00:00</p>
+   </div>
 </section>
       
       
