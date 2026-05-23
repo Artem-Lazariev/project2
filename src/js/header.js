@@ -61,6 +61,6 @@ btnRef.addEventListener('click', evt => {
 switchRef.addEventListener('click', evt => {
   rangeRef.classList.toggle('active');
   if (rangeRef.className === 'active') {
-    iconRef.href = '/img/symbol-defs.svg#moon';
+    iconRef.href = '../img/moon.webp';
   }
 });
