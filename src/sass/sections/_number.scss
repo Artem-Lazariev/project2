@@ -1,1 +1,30 @@
 @use "../base/var" as *;
+.number {
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 31px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 12px;
+        text-align: right;
+        color: #000;
+        margin-left: 202px;
+    }
+
+    &__input {
+        border-radius: 20px;
+        padding: 10px 45px 10px 10px;
+        width: 150px;
+        height: 35px;
+    }
+
+    &__button {
+        border-radius: 0 20px 20px 0;
+        fill: #000;
+    }
+}
+
