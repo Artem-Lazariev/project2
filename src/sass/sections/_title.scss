@@ -1,0 +1,26 @@
+@use "../base/var" as *;
+.title{
+    padding-top: 36px;
+
+    &__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &::after{
+            content: "";
+            height: 1px;
+            width: 536px;
+            background-color: $text-color;
+        }
+    }
+
+    &__text{
+        width: 386px;
+     color: $text-color;
+font-size: 24px;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 36px;
+    }
+}

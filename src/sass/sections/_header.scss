@@ -1,0 +1,134 @@
+@use "../base/var" as *;
+.header{
+    background-color: $main-color;
+    padding: 21px 0;
+    &__div{
+                position: relative;
+        display: flex;
+    }
+    &__span{
+        color: $text-color;
+font-family: Sacramento;
+font-size: 12px;
+font-weight: 400;
+line-height: normal;
+
+    }
+    &__icon{
+width: 93px;
+height: 38px;
+
+    }
+
+    &__link{
+        color: $text-color;
+font-size: 12px;
+font-weight: 400;
+line-height: normal;
+
+    }
+    &__btn{
+
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+            color: $text-color;
+font-size: 12px;
+font-weight: 400;
+line-height: normal;
+    }
+    &__strilka{
+        width: 15px;
+        height: 15px;
+
+    }
+    &__interactive{
+        background-color: $main-color;
+        position: absolute;
+        top: 30px;
+        left: 170px;
+        border: 1px solid $text-color;
+        border-top: none;
+        border-radius: 0 0 20px 20px;
+        display: none;
+        flex-direction: column;
+
+    }
+    &__text{
+        background-color: transparent;
+                width: 160px;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        color: $text-color;
+font-size: 12px;
+font-weight: 400;
+line-height: normal;
+
+    }
+    &__items{
+        &:is(:hover, :focus){
+            background-color: $hover-color;
+            &:last-child{
+                border-radius: 0 0 20px 20px;
+            }
+        }
+    }
+    &__subtitle{
+        color: $text-color;
+text-align: right;
+font-size: 12px;
+font-weight: 400;
+line-height: normal;
+
+    }
+    &__switcher{
+        width: 40px;
+height: 20px;
+border-radius: 11px;
+background-color: $input-color;
+    }
+    &__range{
+        width: 20px;
+height: 20px;
+background-color: $main-color;
+outline: 1px solid $text-color;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+transition-property: transform, background-color;
+transition-duration: 250ms;
+transition-timing-function: ease;
+    }
+    &__theme{
+        width: 15px;
+height: 15px;
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-left: 81px;
+        margin-right: auto;
+    }
+    &__lister{
+        display: flex;
+        gap: 51px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.active{
+    transform: translateX(20px);
+    background-color: $text-color;
+    .header__theme{
+        fill: $main-color;
+    }
+}
+.open{
+    display:flex;
+}

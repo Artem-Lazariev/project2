@@ -1,3 +1,4 @@
+@use "../base/var" as *;
 .number {
     &__title {
         font-weight: 400;
@@ -26,3 +27,4 @@
         fill: #000;
     }
 }
+
