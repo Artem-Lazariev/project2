@@ -112,10 +112,6 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.header__strilka {
-  width: 25px;
-  height: 25px;
-}
 .header__interactive {
   background-color: #FFF;
   position: absolute;
