@@ -361,6 +361,37 @@ body {
   flex-basis: calc((100% - 10px) / 2);
 }
 
+.football {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 36px;
+}
+.football__title {
+  /* Layout */
+  width: 74px;
+  height: 20px;
+  /* Typography */
+  font-family: "Montserrat Alternates", sans-serif; /* Truncated in image, likely Montserrat Alternates */
+  font-weight: 400;
+  font-style: normal; /* 'Regular' style maps to normal */
+  font-size: 16px;
+  line-height: 100%;
+}
+.football__field {
+  background-color: #5ABB58;
+  border-radius: 37px;
+  width: 720px;
+  height: 220px;
+  border: 2px solid #000;
+  position: relative;
+}
+.football__ball {
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 .maxnumber {
   padding-top: 36px;
 }
