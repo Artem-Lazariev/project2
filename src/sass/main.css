@@ -113,8 +113,8 @@ body {
   line-height: normal;
 }
 .header__strilka {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
 }
 .header__interactive {
   background-color: #FFF;
@@ -223,6 +223,30 @@ body {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 36px;
+}
+
+.number__title {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 31px;
+}
+.number__text {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: right;
+  color: #000;
+  margin-left: 202px;
+}
+.number__input {
+  border-radius: 20px;
+  padding: 10px 45px 10px 10px;
+  width: 150px;
+  height: 35px;
+}
+.number__button {
+  border-radius: 0 20px 20px 0;
+  fill: #000;
 }
 
 .rps {
