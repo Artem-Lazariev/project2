@@ -63,8 +63,8 @@
 <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8205" d="M20.739 6.46l1.344 2.305"></path>
 <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.8205" d="M21.456 3.784l2.316-1.324"></path>
 </symbol>
-<symbol id="strilka__down" viewBox="0 0 53 32">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M50 2l-24 26.667-24-26.667"></path>
+<symbol id="strilka__down" viewBox="0 0 24 24">
+<path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path>
 </symbol>
 <symbol id="logotype" viewBox="0 0 75 32">
 <path fill="none" stroke="#000" style="stroke: var(--color1, #000)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.9143" d="M8.734 9.943l-7.94 8 7.94 8"></path>
