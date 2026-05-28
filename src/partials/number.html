@@ -1,9 +1,16 @@
 <!-- pavlo pasichnyk -->
 <section class="number">
-    <h3 class="number__title">Вгадай число, яке загадав комп’ютер</h3>
+    <div class="container number__box">
+    <h2 class="number__title">Вгадай число, яке загадав комп’ютер</h2>
+    <div class="number__div">
     <label class="number__label">
-        <input class="number__input" type="number" placeholder="Введіть число">
-        <button type="button" class="number__button"></button>
+        <input class="number__input" type="text" placeholder="Введіть число">
+        <button type="button" class="number__button">
+            <svg class="number__icon">
+            <use href="img/symbol-defs.svg#search"></use>
+        </svg></button>
     </label>
-    <p class="number__text">Я загадав число від 1 до 100. Спробуй вгадати!</p>
+    <p class="number__text">Я загадав число від 1 до 10. Спробуй вгадати!</p>
+    </div>
+    </div>
 </section>
