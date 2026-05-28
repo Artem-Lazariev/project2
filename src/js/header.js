@@ -1,3 +1,5 @@
+import moon from '/img/moon.webp';
+import sun from '/img/sun.webp';
 const btnRef = document.querySelector('.header__btn');
 const listRef = document.querySelector('.header__interactive');
 const switchRef = document.querySelector('.header__switcher');
@@ -60,7 +62,9 @@ btnRef.addEventListener('click', evt => {
 });
 switchRef.addEventListener('click', evt => {
   rangeRef.classList.toggle('active');
-  if (rangeRef.className === 'active') {
-    iconRef.href = '/img/symbol-defs.svg#moon';
+  if (rangeRef.classList.contains('active')) {
+    iconRef.src = moon;
+  } else {
+    iconRef.src = sun;
   }
 });

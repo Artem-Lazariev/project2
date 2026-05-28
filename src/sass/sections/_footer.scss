@@ -48,15 +48,15 @@
     font-weight: 400;
     line-height: normal;
   }
-  &__subscribe{
-    display: flex;
+  &__form{
+        display: flex;
     gap: 36px;
     margin-bottom: 18px;
   }
-  &__label {
-    color: $text-color;
+  &__sub{
+   color: $text-color;
     font-size: 6px;
     font-weight: 400;
     line-height: normal;
   }
-}//aaaaaa
+}
