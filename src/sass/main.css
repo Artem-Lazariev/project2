@@ -682,6 +682,59 @@ body {
   gap: 38px;
 }
 
+.team {
+  padding-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+.team__img {
+  width: 150px;
+  height: 150px;
+}
+.team__select > button {
+  background-color: transparent;
+}
+.team__title {
+  margin-bottom: 16px;
+}
+.team__select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 328px;
+  flex-direction: row;
+}
+.team__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.team__dot {
+  width: 18px;
+  height: 3px;
+  background: #D9D9D9;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.team__dot--active {
+  background-color: #757575;
+  background-image: none;
+  width: 30px;
+  height: 3px;
+}
+.team::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
+}
+
 .footer {
   background-color: #FFF;
   padding: 61px 0 59px 0;
