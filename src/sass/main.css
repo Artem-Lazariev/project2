@@ -222,6 +222,9 @@ body {
   margin-bottom: 36px;
 }
 
+.year {
+  padding-top: 36px;
+}
 .year__subtitle {
   width: 283px;
   height: 20px;
@@ -229,6 +232,63 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 36px;
+}
+.year__btn {
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 180px;
+  width: 35px;
+  height: 35px;
+}
+.year__label {
+  position: relative;
+}
+.year__input {
+  padding: 10px;
+  border-radius: 20px;
+  background: #D7D7D7;
+  width: 150px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  color: #7E7E7E;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  width: 215px;
+  height: 35px;
+}
+.year__icon {
+  width: 15px;
+  height: 15px;
+  fill: #FFF;
+}
+.year__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.year__box::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
+  margin-top: 36px;
+}
+.year__text {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.year__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 146px;
 }
 
 .number {
@@ -448,7 +508,6 @@ body {
   flex-basis: calc((100% - 10px) / 2);
 }
 
-.dino__box {
 .time__subtitle {
   width: 283px;
   height: 20px;
