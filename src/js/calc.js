@@ -18,6 +18,9 @@ btnResRef.addEventListener("click", (evt) => {
       textRef.textContent = Number(inputOneRef.value) * Number(inputTwoRef.value);
     } else if (sign === '/') {
       textRef.textContent = Number(inputOneRef.value) / Number(inputTwoRef.value);
+      if (Number(inputTwoRef.value) === 0) {
+        textRef.textContent = 'На нуль ділити не можна';
+      }
     } else {
       textRef.textContent = 'Помилка';
     }
