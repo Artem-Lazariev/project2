@@ -45,35 +45,36 @@ textarea:focus-visible {
   box-shadow: none;
 }
 
-body {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../img/main-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.box {
+  width: 1090px;
+  background-color: #FFF;
+}
+
+body {
   font-family: "Montserrat Alternates";
 }
 
 .container {
-  max-width: 1090px;
+  width: 1090px;
   padding: 0 10px;
   margin: 0 auto;
-}
-@media screen and (min-width: 300px) {
-  .container {
-    width: 300px;
-  }
-}
-@media screen and (min-width: 678px) {
-  .container {
-    width: 678px;
-    padding: 0 15px;
-  }
-}
-@media screen and (min-width: 1090px) {
-  .container {
-    width: 1090px;
-    padding: 0 20px;
-  }
 }
 
 .header {
@@ -330,7 +331,7 @@ body {
   border-radius: 20px;
   background: #D7D7D7;
   width: 150px;
-  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 3px 0 0 #000;
   color: #7E7E7E;
   font-size: 12px;
   font-weight: 400;
@@ -522,11 +523,19 @@ body {
   line-height: normal;
 }
 
+.dino__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .football {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.dino__box::after {
   gap: 36px;
 }
 .football__title {
@@ -557,6 +566,12 @@ body {
   height: 1px;
   width: 536px;
   background-color: #000;
+  margin-top: 36px;
+}
+.dino__title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .maxnumber {
