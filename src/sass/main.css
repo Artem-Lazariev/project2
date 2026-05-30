@@ -331,7 +331,7 @@ body {
   border-radius: 20px;
   background: #D7D7D7;
   width: 150px;
-  box-shadow: 3px 3px 0 0 #000;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
   color: #7E7E7E;
   font-size: 12px;
   font-weight: 400;
@@ -508,25 +508,95 @@ body {
   flex-basis: calc((100% - 10px) / 2);
 }
 
-.time__subtitle {
-  width: 283px;
-  height: 20px;
+.time__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.time__box::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
+  margin-top: 36px;
+}
+.time__title {
   color: #000;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
+  margin-bottom: 36px;
 }
 .time__text {
+  font-weight: 400;
+  font-size: 12px;
+  text-align: right;
   color: #000;
+}
+.time__btn {
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 115px;
+  width: 35px;
+  height: 35px;
+}
+.time__input {
+  padding: 10px;
+  border-radius: 20px;
+  background: #D7D7D7;
+  width: 150px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  color: #7E7E7E;
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
 }
-
-.dino__container {
+.time__label {
+  position: relative;
+}
+.time__label::after {
+  content: "";
+  border: 1px dashed #000;
+  width: 100px;
+  height: 0px;
+  position: absolute;
+  top: 17px;
+  left: 200px;
+}
+.time__icon {
+  width: 15px;
+  height: 15px;
+  fill: #FFF;
+}
+.time__div {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 202px;
+  position: relative;
+}
+
+.dino__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.dino__box::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
+  margin-top: 36px;
+}
+.dino__title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .football {
@@ -534,8 +604,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-.dino__box::after {
   gap: 36px;
 }
 .football__title {
@@ -566,12 +634,6 @@ body {
   height: 1px;
   width: 536px;
   background-color: #000;
-  margin-top: 36px;
-}
-.dino__title {
-  color: #000;
-  font-size: 16px;
-  font-weight: 400;
 }
 
 .maxnumber {

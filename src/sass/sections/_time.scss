@@ -1,18 +1,90 @@
 @use "../base/var" as *;
+
 .time {
-  &__subtitle {
-    width: 283px;
-    height: 20px;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 536px;
+      background-color: $text-color;
+      margin-top: 36px;
+    }
+  }
+
+  &__title {
     color: $text-color;
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 36px;
   }
-  &__text{
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
     color: $text-color;
-font-size: 12px;
-font-weight: 400;
-line-height: normal;
+  }
+
+  &__btn {
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    background: $text-color;
+    position: absolute;
+    top: 0;
+    left: 115px;
+    width: 35px;
+    height: 35px;
+  }
+
+  &__input {
+    padding: 10px;
+    border-radius: 20px;
+    background: $bg-color;
+    width: 150px;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+    color: $input-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+
 
   }
+
+  &__label {
+    position: relative;
+
+
+    &::after {
+      content: "";
+      border: 1px dashed $text-color;
+      width: 100px;
+      height: 0px;
+      position: absolute;
+      top: 17px;
+      left: 200px;
+      
+    }
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: $main-color;
+  }
+
+  &__div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 202px;
+    position: relative;
+  }
+
 }
