@@ -16,7 +16,7 @@ function update(){
   document.querySelectorAll(".team__dot").forEach(dot => dot.className = "team__dot")
   let dot = dots.children[card - 1]
   dot.className = "team__dot team__dot--active"
-  img.src = "../.././img/card" + card + ".jpg"
+  img.src = "./card" + card + ".jpg"
   text.innerHTML = team__text[card - 1]
   name.innerHTML = team__names[card - 1]
 }
