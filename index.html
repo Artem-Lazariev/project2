@@ -12,7 +12,7 @@
     
 
     <script type="module" crossorigin src="/project2/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project2/assets/index-7b330be0.css">
+    <link rel="stylesheet" href="/project2/assets/index-ff9100f9.css">
   </head>
   <body>
     <!-- Loads the specified .html file -->
@@ -21,7 +21,7 @@
   <div class="container header__div">
   <a class="header__logo" href="../index.html">
     <svg class="header__icon">
-      <use href="/project2/assets/symbol-defs-f3512f0a.svg#logotype"></use>
+      <use href="/project2/assets/symbol-defs-870a8e3c.svg#logotype"></use>
     </svg>
   </a>
   <ul class="header__list">
@@ -72,7 +72,7 @@
         <input type="text" class="year__input" placeholder="Введіть рік народження">
       <button class="year__btn" type="button">
         <svg class="year__icon">
-      <use href="/project2/assets/symbol-defs-f3512f0a.svg#search"></use>
+      <use href="/project2/assets/symbol-defs-870a8e3c.svg#search"></use>
     </svg>   
     </button>   
     </label>
@@ -89,7 +89,7 @@
         <input class="number__input" type="number" placeholder="Введіть число">
         <button type="button" class="number__button">
             <svg class="number__icon">
-            <use href="/project2/assets/symbol-defs-f3512f0a.svg#search"></use>
+            <use href="/project2/assets/symbol-defs-870a8e3c.svg#search"></use>
         </svg></button>
     </label>
     <p class="number__text">Я загадав число від 1 до 10. Спробуй вгадати!</p>
@@ -103,21 +103,21 @@
       <li>
         <button>
           <svg class="rps__icon">
-            <use href="/project2/assets/symbol-defs-f3512f0a.svg#stone"></use>
+            <use href="/project2/assets/symbol-defs-870a8e3c.svg#stone"></use>
           </svg>
         </button>
       </li>
       <li>
         <button>
           <svg class="rps__icon">
-            <use href="/project2/assets/symbol-defs-f3512f0a.svg#scissors"></use>
+            <use href="/project2/assets/symbol-defs-870a8e3c.svg#scissors"></use>
           </svg>
         </button>
       </li>
       <li>
         <button>
           <svg class="rps__icon">
-            <use href="/project2/assets/symbol-defs-f3512f0a.svg#paper"></use>
+            <use href="/project2/assets/symbol-defs-870a8e3c.svg#paper"></use>
           </svg>
         </button>
       </li>
@@ -157,7 +157,7 @@
                 <input required class="time__input" placeholder="Введіть число" type="text">
                 <button class="time__btn" type="button">
                     <svg class="time__icon">
-                        <use href="/project2/assets/symbol-defs-f3512f0a.svg#search"></use>
+                        <use href="/project2/assets/symbol-defs-870a8e3c.svg#search"></use>
                     </svg>
                 </button>
             </label>
@@ -172,8 +172,8 @@
 </section>
       <section class="container football">
   <h2 class="football__title">Футбол</h2>
-  <div id="f__field" class="football__field">
-    <div id="f__ball" class="football__ball">
+  <div id="football__field" class="football__field">
+    <div id="football__ball" class="football__ball">
       <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect width="50" height="50" fill="url(#pattern0_30_157)"/>
         <defs>
@@ -198,16 +198,40 @@
     <p class="maxnumber__subtitle">Найбільше число, яке ви ввели - <span class="maxnumber__number">(число)</span></p>
     </div>
 </section>
-      
+      <section class="container team">
+  <h2 class="team__title">Наша команда</h2>
+  <div class="team__select" id="team__select">
+    <button id="team__left">
+      <svg width="52" height="101" viewBox="0 0 52 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50.7071 0.353516L0.707095 50.3535L50.7071 100.354" stroke="black"/>
+      </svg>
+    </button>
+    <img class="team__img" id="team__img" src="../img/card1.jpg" alt="team">
+    <button id="team__right">
+      <svg width="52" height="101" viewBox="0 0 52 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.353546 0.353516L50.3535 50.3535L0.353546 100.354" stroke="black"/>
+      </svg>
+    </button>
+  </div>
+  <p id="team__name"></p>
+  <p id="team__text"></p>
+  <div class="team__dots" id="team__dots">
+    <span class="team__dot team__dot--active"></span>
+    <span class="team__dot"></span>
+    <span class="team__dot"></span>
+    <span class="team__dot"></span>
+  </div>
+  <script src="../js/team.js"></script>
+</section>
       
       </div>
     </main>
     <!-- pavlo lesiv -->
 <footer class="footer">
     <div class="container footer__box">
-  <a class="footer__logo" href="../index.html">
+      <a class="footer__logo" href="../index.html">
     <svg class="footer__icon">
-      <use href="/project2/assets/symbol-defs-f3512f0a.svg#logotype"></use>
+      <use href="/project2/assets/symbol-defs-870a8e3c.svg#logotype"></use>
     </svg>
   </a>
   <p class="footer__text">
@@ -219,7 +243,7 @@
 </p>
 <div class="footer__div">
 <form  class="footer__form">
-    <input required type="email" placeholder="Ваша ел. адреса..." class="footer__email">
+    <input type="email" placeholder="Ваша ел. адреса..." class="footer__email" required>
     <button class="footer__btn" type="submit">Підписатись</button>
 </form>
   <p class="footer__sub">*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</p>
@@ -238,7 +262,7 @@
     </label>
 <button class="menu__button" type="button">
       <svg class="menu__icon">
-      <use href="/project2/assets/symbol-defs-f3512f0a.svg#hrestik"></use>
+      <use href="/project2/assets/symbol-defs-870a8e3c.svg#hrestik"></use>
     </svg>
 </button>
 </section>
@@ -246,7 +270,7 @@
     <h2 class="thanks__subtitle">Дякую за підписку!</h2>
 <button class="thanks__btn" type="button">
     <svg class="thanks__icon">
-      <use href="/project2/assets/symbol-defs-f3512f0a.svg#hrestik"></use>
+      <use href="/project2/assets/symbol-defs-870a8e3c.svg#hrestik"></use>
     </svg>
 </button>
 </section>
