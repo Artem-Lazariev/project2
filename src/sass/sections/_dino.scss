@@ -1,1 +1,27 @@
 @use "../base/var" as *;
+
+.dino {
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+         &::after {
+            content: "";
+            height: 1px;
+            width: 536px;
+            background-color: $text-color;
+            margin-top: 36px;
+        }
+    }
+
+    &__title {
+        color: $text-color;
+        font-size: 16px;
+        font-weight: 400;
+
+    }
+}
+   

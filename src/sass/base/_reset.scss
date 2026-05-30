@@ -46,6 +46,11 @@ textarea:focus-visible {
   outline: none;
   box-shadow: none;
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 main{
         display: flex;
     flex-direction: column;
