@@ -1,1 +1,11 @@
 @use "../base/var" as *;
+
+.dino {
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
