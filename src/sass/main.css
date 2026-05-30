@@ -45,35 +45,30 @@ textarea:focus-visible {
   box-shadow: none;
 }
 
-body {
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../img/main-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.box {
+  width: 1090px;
+  background-color: #FFF;
+}
+
+body {
   font-family: "Montserrat Alternates";
 }
 
 .container {
-  max-width: 1090px;
+  width: 1090px;
   padding: 0 10px;
   margin: 0 auto;
-}
-@media screen and (min-width: 300px) {
-  .container {
-    width: 300px;
-  }
-}
-@media screen and (min-width: 678px) {
-  .container {
-    width: 678px;
-    padding: 0 15px;
-  }
-}
-@media screen and (min-width: 1090px) {
-  .container {
-    width: 1090px;
-    padding: 0 20px;
-  }
 }
 
 .header {

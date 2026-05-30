@@ -21,7 +21,7 @@ btnResRef.addEventListener("click", (evt) => {
       if (Number(inputTwoRef.value) === 0) {
         textRef.textContent = 'На нуль ділити не можна';
       }
-    } else {
+    } else{
       textRef.textContent = 'Помилка';
     }
 })
