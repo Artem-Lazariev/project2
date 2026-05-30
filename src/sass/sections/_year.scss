@@ -1,6 +1,7 @@
 @use "../base/var" as *;
 
 .year {
+padding-top: 36px;
 &__subtitle {
   width: 283px;
 height: 20px;
@@ -8,6 +9,75 @@ color: $text-color;
 font-size: 16px;
 font-weight: 400;
 line-height: normal;
+margin-bottom: 36px;
+    }
+
+    &__btn {
+        padding: 10px;
+        border-radius: 0 20px 20px 0;
+        background: $text-color;
+        position: absolute;
+        top: 0;
+        left: 180px;
+        width: 35px;
+        height: 35px;
+    }
+
+    &__label{
+      position: relative;
 
     }
+
+    &__input {
+        padding: 10px;
+        border-radius: 20px;
+        background: $bg-color;
+        width: 150px;
+        box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+        color: $input-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+width: 215px;
+height: 35px;
+
+
+    }
+
+    &__icon{
+      width: 15px;
+      height: 15px;
+fill: $main-color;
+    }
+
+    &__box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &::after{
+            content: "";
+            height: 1px;
+            width: 536px;
+            background-color: $text-color;
+            margin-top: 36px;
+        }
+    }
+
+
+    &__text{
+      color: $text-color;
+font-size: 12px;
+font-weight: 400;
+line-height: normal;
+
+    }
+
+   &__div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 146px;
+   }
 }
