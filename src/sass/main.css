@@ -216,28 +216,69 @@ body {
   margin-bottom: 36px;
 }
 
+.number {
+  padding: 36px 0;
+}
+.number__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.number__box::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
+  margin-top: 36px;
+}
+.number__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 202px;
+}
 .number__title {
-  font-weight: 400;
-  font-size: 16px;
   color: #000;
-  margin-bottom: 31px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 36px;
 }
 .number__text {
   font-weight: 400;
   font-size: 12px;
   text-align: right;
   color: #000;
-  margin-left: 202px;
 }
 .number__input {
+  padding: 10px;
   border-radius: 20px;
-  padding: 10px 45px 10px 10px;
+  background: #D7D7D7;
   width: 150px;
-  height: 35px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  color: #7E7E7E;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
 }
 .number__button {
+  padding: 10px;
   border-radius: 0 20px 20px 0;
-  fill: #000;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 115px;
+  width: 35px;
+  height: 35px;
+}
+.number__label {
+  position: relative;
+}
+.number__icon {
+  width: 15px;
+  height: 15px;
+  fill: #FFF;
 }
 
 .rps {
@@ -245,9 +286,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #000;
   gap: 36px;
   padding-top: 36px;
+  position: relative;
+}
+.rps::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
 }
 .rps__icon {
   width: 40px;
@@ -269,7 +316,19 @@ body {
   flex-direction: row;
   gap: 104px;
 }
-.rps__buttons > button {
+.rps__list {
+  display: flex;
+  flex-direction: row;
+  gap: 38px;
+}
+.rps__result {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  right: 200px;
+}
+.rps__list > li > button {
   width: 60px;
   height: 60px;
   border-radius: 20px;
@@ -372,6 +431,43 @@ body {
 }
 .calc__item {
   flex-basis: calc((100% - 10px) / 2);
+}
+
+.football {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 36px;
+}
+.football__title {
+  /* Layout */
+  width: 74px;
+  height: 20px;
+  /* Typography */
+  font-family: "Montserrat Alternates", sans-serif; /* Truncated in image, likely Montserrat Alternates */
+  font-weight: 400;
+  font-style: normal; /* 'Regular' style maps to normal */
+  font-size: 16px;
+  line-height: 100%;
+}
+.football__field {
+  background-color: #5ABB58;
+  border-radius: 37px;
+  width: 720px;
+  height: 220px;
+  border: 2px solid #000;
+  position: relative;
+}
+.football__ball {
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.football::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
 }
 
 .maxnumber {

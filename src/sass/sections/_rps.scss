@@ -4,9 +4,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid $text-color;
   gap: 36px;
   padding-top: 36px;
+  position: relative;
+  &::after{
+    content: "";
+    height: 1px;
+    width: 536px;
+    background-color: $text-color;
+  }
   &__icon {
     width: 40px;
     height: 40px;
@@ -26,8 +32,22 @@
     display: flex;
     flex-direction: row;
     gap: 104px;
+
   }
-  &__buttons > button{
+  &__list{
+    display: flex;
+    flex-direction: row;
+    gap: 38px;
+  }
+  &__result{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+
+    right: 200px;
+  }
+  &__list > li >button{
     width: 60px;
     height: 60px;
     border-radius: 20px;
