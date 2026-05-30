@@ -7,7 +7,7 @@ const btnDivadetRef = document.querySelector('#divadet');
 const btnResRef = document.querySelector('#res');
 const textRef = document.querySelector('.calc__result');
 
-let sign;
+let sign = "";
 
 btnResRef.addEventListener("click", (evt) => {
     if (sign === '+') {
@@ -21,7 +21,7 @@ btnResRef.addEventListener("click", (evt) => {
       if (Number(inputTwoRef.value) === 0) {
         textRef.textContent = 'На нуль ділити не можна';
       }
-    } else {
+    } else{
       textRef.textContent = 'Помилка';
     }
 })

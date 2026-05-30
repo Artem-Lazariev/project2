@@ -45,35 +45,36 @@ textarea:focus-visible {
   box-shadow: none;
 }
 
-body {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../img/main-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.box {
+  width: 1090px;
+  background-color: #FFF;
+}
+
+body {
   font-family: "Montserrat Alternates";
 }
 
 .container {
-  max-width: 1090px;
+  width: 1090px;
   padding: 0 10px;
   margin: 0 auto;
-}
-@media screen and (min-width: 300px) {
-  .container {
-    width: 300px;
-  }
-}
-@media screen and (min-width: 678px) {
-  .container {
-    width: 678px;
-    padding: 0 15px;
-  }
-}
-@media screen and (min-width: 1090px) {
-  .container {
-    width: 1090px;
-    padding: 0 20px;
-  }
 }
 
 .header {
@@ -221,6 +222,15 @@ body {
   margin-bottom: 36px;
 }
 
+.year__subtitle {
+  width: 283px;
+  height: 20px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .number {
   padding: 36px 0;
 }
@@ -291,9 +301,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #000;
   gap: 36px;
   padding-top: 36px;
+  position: relative;
+}
+.rps::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
 }
 .rps__icon {
   width: 40px;
@@ -315,7 +331,19 @@ body {
   flex-direction: row;
   gap: 104px;
 }
-.rps__buttons > button {
+.rps__list {
+  display: flex;
+  flex-direction: row;
+  gap: 38px;
+}
+.rps__result {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  right: 200px;
+}
+.rps__list > li > button {
   width: 60px;
   height: 60px;
   border-radius: 20px;
@@ -421,12 +449,54 @@ body {
 }
 
 .dino__box {
+.time__subtitle {
+  width: 283px;
+  height: 20px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+.time__text {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.football {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 .dino__box::after {
+  gap: 36px;
+}
+.football__title {
+  /* Layout */
+  width: 74px;
+  height: 20px;
+  /* Typography */
+  font-family: "Montserrat Alternates", sans-serif; /* Truncated in image, likely Montserrat Alternates */
+  font-weight: 400;
+  font-style: normal; /* 'Regular' style maps to normal */
+  font-size: 16px;
+  line-height: 100%;
+}
+.football__field {
+  background-color: #5ABB58;
+  border-radius: 37px;
+  width: 720px;
+  height: 220px;
+  border: 2px solid #000;
+  position: relative;
+}
+.football__ball {
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.football::after {
   content: "";
   height: 1px;
   width: 536px;
@@ -542,6 +612,26 @@ body {
 .footer__sub {
   color: #000;
   font-size: 6px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu__subtitle {
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+.menu__label {
+  color: #000;
+}
+.menu__btn {
+  border-radius: 20px;
+  background: #000;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+  color: #FFF;
+  font-size: 12px;
   font-weight: 400;
   line-height: normal;
 }/*# sourceMappingURL=main.css.map */
