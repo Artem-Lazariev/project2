@@ -1,17 +1,10 @@
-const inpOneRef = document.querySelector("#num1");
-const inpTwoRef = document.querySelector('#num2');
-const inpThreeRef = document.querySelector('#num3');
+const inputsRef = document.querySelectorAll('.maxnumber__input'); 
 const textRef = document.querySelector('.maxnumber__number');
 
-document.addEventListener('keydown', (evt) => {
+document.addEventListener('keydown', evt => {
   if (evt.code === 'Enter') {
-    const maxNumber = Math.max(
-      inpOneRef.value,
-      inpTwoRef.value,
-      inpThreeRef.value
-    );
+    const values = Array.from(inputsRef, inp => Number(inp.value));
+    const maxNumber = Math.max(...values);
     textRef.textContent = maxNumber;
-  } else {
-    return;
   }
 });
