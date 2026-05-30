@@ -464,6 +464,12 @@ body {
   line-height: normal;
 }
 
+.dino__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .football {
   display: flex;
   align-items: center;
