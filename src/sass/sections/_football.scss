@@ -4,16 +4,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 36px;
   gap: 36px;
   &__title {
-  /* Layout */
     width: 74px;
     height: 20px;
 
-    /* Typography */
-    font-family: 'Montserrat Alternates', sans-serif; /* Truncated in image, likely Montserrat Alternates */
+    font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 400;
-    font-style: normal; /* 'Regular' style maps to normal */
+    font-style: normal;
     font-size: 16px;
     line-height: 100%;
   }

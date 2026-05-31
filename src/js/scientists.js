@@ -11,142 +11,71 @@ import s10 from "../img/sarah.png"
 import s11 from "../img/meitner.jpg"
 import s12 from "../img/hanna.jpg"
 
-const scientists__imgs = document.querySelector('.scientists__imgs');
-const scientists__list = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12]
+// Змінили селектор під нову текстову сітку
+const scientists__grid = document.querySelector('#scientists__grid');
+const scientists__list = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12];
 const scientists__filter = document.querySelectorAll('.scientists__button');
+
 const scientists = [
-  {
-    name: "Albert",
-    surname: "Einstein",
-    born: 1879,
-    dead: 1955,
-    id: 1
-  },
-  {
-    name: "Isaac",
-    surname: "Newton",
-    born: 1643,
-    dead: 1727,
-    id: 2
-  },
-  {
-    name: "Galileo",
-    surname: "Galilei",
-    born: 1564,
-    dead: 1642,
-    id: 3
-  },
-  {
-    name: "Marie",
-    surname: "Curie",
-    born: 1867,
-    dead: 1934,
-    id: 4
-  },
-  {
-    name: "Johannes",
-    surname: "Kepler",
-    born: 1571,
-    dead: 1630,
-    id: 5
-  },
-  {
-    name: "Nicolaus",
-    surname: "Copernicus",
-    born: 1473,
-    dead: 1543,
-    id: 6
-  },
-  {
-    name: "Max",
-    surname: "Planck",
-    born: 1858,
-    dead: 1947,
-    id: 7
-  },
-  {
-    name: "Katherine",
-    surname: "Blodgett",
-    born: 1898,
-    dead: 1979,
-    id: 8
-  },
-  {
-    name: "Ada",
-    surname: "Lovelace",
-    born: 1815,
-    dead: 1852,
-    id: 9
-  },
-  {
-    name: "Sarah E.",
-    surname: "Goode",
-    born: 1855,
-    dead: 1905,
-    id: 10
-  },
-  {
-    name: "Lise",
-    surname: "Meitner",
-    born: 1878,
-    dead: 1968,
-    id: 11
-  },
-  {
-    name: "Hanna",
-    surname: "Hammarström",
-    born: 1829,
-    dead: 1909,
-    id: 12
-  }
+  { name: "Albert", surname: "Einstein", born: 1879, dead: 1955, id: 1 },
+  { name: "Isaac", surname: "Newton", born: 1643, dead: 1727, id: 2 },
+  { name: "Galileo", surname: "Galilei", born: 1564, dead: 1642, id: 3 },
+  { name: "Marie", surname: "Curie", born: 1867, dead: 1934, id: 4 },
+  { name: "Johannes", surname: "Kepler", born: 1571, dead: 1630, id: 5 },
+  { name: "Nicolaus", surname: "Copernicus", born: 1473, dead: 1543, id: 6 },
+  { name: "Max", surname: "Planck", born: 1858, dead: 1947, id: 7 },
+  { name: "Katherine", surname: "Blodgett", born: 1898, dead: 1979, id: 8 },
+  { name: "Ada", surname: "Lovelace", born: 1815, dead: 1852, id: 9 },
+  { name: "Sarah E.", surname: "Goode", born: 1855, dead: 1905, id: 10 },
+  { name: "Lise", surname: "Meitner", born: 1878, dead: 1968, id: 11 },
+  { name: "Hanna", surname: "Hammarström", born: 1829, dead: 1909, id: 12 }
 ];
+
 function filterScientists(filter) {
   switch (filter) {
-    case 1:
+    case 1: // 19 століття (з 1801 по 1900 рік)
       return scientists.filter(function(e) {
         return e.born >= 1801 && e.born <= 1900;
       });
 
-    case 2:
+    case 2: // Алфавітний порядок
       return [...scientists].sort(function(a, b) {
-        if (a.surname.toLowerCase() < b.surname.toLowerCase()) return -1;
-        if (a.surname.toLowerCase() > b.surname.toLowerCase()) return 1;
-        return 0;
+        return a.surname.toLowerCase().localeCompare(b.surname.toLowerCase());
       });
 
-    case 3:
+    case 3: // Сортування за віком (прожиті роки)
       return [...scientists].sort(function(a, b) {
         return (b.dead - b.born) - (a.dead - a.born);
       });
 
-    case 4:
+    case 4: // Хто народився найпізніше
       const latest = scientists.reduce(function(max, obj) {
         return obj.born > max.born ? obj : max;
       });
       return [latest];
 
-    case 5:
+    case 5: // Рік народження Ейнштейна
       return scientists.filter(function(e) {
         return e.name === "Albert" && e.surname === "Einstein";
       });
 
-    case 6:
+    case 6: // Прізвища на літеру "C" (враховуємо укр "С" та англ "C")
       return scientists.filter(function(e) {
-        return e.surname.startsWith("С");
+        return e.surname.startsWith("С") || e.surname.startsWith("C");
       });
 
-    case 7:
+    case 7: // Видалити тих, чиє ім'я починається на "A" (укр "А" та англ "A")
       return scientists.filter(function(e) {
-        return !e.name.startsWith("А");
+        return !e.name.startsWith("А") && !e.name.startsWith("A");
       });
 
-    case 8:
+    case 8: // Прожив найдовше і найменше
       const sortedByAge = [...scientists].sort(function(a, b) {
         return (b.dead - b.born) - (a.dead - a.born);
       });
       return [sortedByAge[0], sortedByAge[sortedByAge.length - 1]];
 
-    case 9:
+    case 9: // Однакове перші літери імені та прізвища
       return scientists.filter(function(e) {
         return e.name[0].toLowerCase() === e.surname[0].toLowerCase();
       });
@@ -155,21 +84,45 @@ function filterScientists(filter) {
       return scientists;
   }
 }
+
 function clearScientists() {
-  scientists__imgs.innerHTML = '';
+  scientists__grid.innerHTML = '';
 }
+
+// ПЕРЕПИСАНО: Текстовий вивід карток без зображень
 function createScientists(array) {
   clearScientists();
-  const htmlArray = array.map(function(e) {
-    // Використовуємо e.img для картинки і e.surname для альт-тексту
-    return `<img class="scientists__imgs__img" src="${scientists__list[e.id - 1]}" alt="${e.surname}"/>`;
+
+  const htmlArray = array.map(function (e) {
+    return `
+      <div class="scientist__card">
+        <img
+          class="scientist__card__img"
+          src="${scientists__list[e.id - 1]}"
+          alt="${e.name}"
+        >
+
+        <div class="scientist__card__name">
+          ${e.name} ${e.surname}
+        </div>
+
+        <div class="scientist__card__years">
+          ${e.born}-${e.dead}
+        </div>
+      </div>
+    `;
   });
 
-  scientists__imgs.innerHTML = htmlArray.join('');
+  scientists__grid.innerHTML = htmlArray.join('');
 }
+
+
+// Початковий рендер усіх вчених
 createScientists(scientists);
-scientists__filter.forEach(function(e,i) {
+
+// Обробник кліків на кнопки
+scientists__filter.forEach(function(e, i) {
   e.addEventListener('click', function() {
     createScientists(filterScientists(i + 1));
   });
-})
+});
