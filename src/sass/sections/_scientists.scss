@@ -37,34 +37,49 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap; // Дозволяємо кнопкам переноситися
-    gap: 20px 36px; // Вертикальний та горизонтальний відступи
-    width: 100%;
-    max-width: 720px; // Обмежуємо ширину контейнера, щоб вміщалися рівно дві кнопки в ряд
+    gap: 20px 36px; // Вертикальний та горизонтальний відступи// Обмежуємо ширину контейнера, щоб вміщалися рівно дві кнопки в ряд
+  }
+  &__buttons > li {
+
+    flex-basis: calc((100% - 36px) / 2);
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+  }
+  &__buttons > li:nth-child(2) {
+    justify-content: flex-start;
+  }
+  &__buttons > li:nth-child(4) {
+    justify-content: flex-start;
   }
 
+  &__buttons > li:nth-child(6) {
+    justify-content: flex-start;
+  }
+  &__buttons > li:nth-child(8) {
+    justify-content: flex-start;
+  }
+  &__buttons > li:nth-child(9) {
+    justify-content: center;
+  }
   &__button {
     border: none;
     cursor: pointer;
     border-radius: 20px;
     background-color: $text-color;
-    padding: 10px 24px;
+    padding: 10px 20px;
     color: #FFFFFF;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.2;
+    font-size: 12px;
+    line-height: 1;
     text-align: center;
 
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 320px;
 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
     &:nth-child(9) {
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: 100%;
-      max-width: 500px;
+
+      max-width: 100px;
     }
   }
   &__grid {
@@ -81,7 +96,7 @@
   height: 110px;
   background: #d9d9d9;
 
-  border-radius: 35px 0 35px 0;
+  border-radius: 20px;
 
   display: flex;
   flex-direction: column;

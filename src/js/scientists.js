@@ -14,7 +14,7 @@ import s12 from "../img/hanna.jpg"
 // Змінили селектор під нову текстову сітку
 const scientists__grid = document.querySelector('#scientists__grid');
 const scientists__list = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12];
-const scientists__filter = document.querySelectorAll('.scientists__button');
+
 
 const scientists = [
   { name: "Albert", surname: "Einstein", born: 1879, dead: 1955, id: 1 },
@@ -95,21 +95,21 @@ function createScientists(array) {
 
   const htmlArray = array.map(function (e) {
     return `
-      <div class="scientist__card">
+      <li class="scientist__card">
         <img
           class="scientist__card__img"
           src="${scientists__list[e.id - 1]}"
           alt="${e.name}"
         >
 
-        <div class="scientist__card__name">
+        <p class="scientist__card__name">
           ${e.name} ${e.surname}
-        </div>
+        </p>
 
-        <div class="scientist__card__years">
+        <p class="scientist__card__years">
           ${e.born}-${e.dead}
-        </div>
-      </div>
+        </p>
+      </li>
     `;
   });
 
@@ -121,8 +121,9 @@ function createScientists(array) {
 createScientists(scientists);
 
 // Обробник кліків на кнопки
-scientists__filter.forEach(function(e, i) {
-  e.addEventListener('click', function() {
-    createScientists(filterScientists(i + 1));
+for (let i = 1; i < 9; i++) {
+  let btn = document.getElementById("team_" + i)
+  btn.addEventListener("click", function () {
+    createScientists(filterScientists(i));
   });
-});
+}
