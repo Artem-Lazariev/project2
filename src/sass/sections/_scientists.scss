@@ -1,1 +1,77 @@
 @use "../base/var" as *;
+
+.scientists {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 36px;
+
+  &__title {
+    color: $text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+
+  }
+
+  &__imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 59px;
+    width: 577px;
+    flex-wrap: wrap;
+  }
+
+  &__imgs > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center; // Центруємо ряди кнопок
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; // Дозволяємо кнопкам переноситися
+    gap: 20px 36px; // Вертикальний та горизонтальний відступи
+    width: 100%;
+    max-width: 720px; // Обмежуємо ширину контейнера, щоб вміщалися рівно дві кнопки в ряд
+  }
+
+  &__button {
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: $text-color;
+    padding: 10px 24px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 320px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    &:nth-child(9) {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 536px;
+    background-color: $text-color;
+  }
+}
