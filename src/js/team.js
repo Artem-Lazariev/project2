@@ -1,6 +1,6 @@
 
-import cardImg1 from "./img/card1.jpg";
-import cardImg2 from "./img/card2.jpg";
+import cardImg1 from "../img/card1.jpg";
+import cardImg2 from "../img/card2.jpg";
 
 
 const team__images = [cardImg1, cardImg2];
