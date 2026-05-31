@@ -1,8 +1,9 @@
 import "./js/header";
 import "./js/number";
 import './js/maxnumber';
-import './js/rps.js'
+import './js/rps';
 import './js/calc';
-import './js/football.js';
-import './js/team.js';//
-import './js/scientists.js';//
+import './js/football.';
+import './js/team';
+import './js/scientists';
+import './js/time';
