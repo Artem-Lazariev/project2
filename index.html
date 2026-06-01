@@ -12,13 +12,24 @@
     
 
     <script type="module" crossorigin src="/project2/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project2/assets/index-f1d86904.css">
+    <link rel="stylesheet" href="/project2/assets/index-fffe3c75.css">
   </head>
   <body>
     <!-- Loads the specified .html file -->
     <!-- pavlo lesiv -->
 <header class="header">
   <div class="container header__div">
+<ul class="header__interactive">
+  <li class="header__items">
+    <button type="button" class="header__text" data-category="numerical">Числовий</button>
+  </li>
+  <li class="header__items">
+    <button type="button" class="header__text" data-category="game">Ігровий</button>
+  </li>
+  <li class="header__items">
+    <button type="button" class="header__text" data-category="acquaintance">Ознайомчий</button>
+  </li>
+</ul>
   <a class="header__logo" href="../index.html">
     <svg class="header__icon">
       <use href="/project2/assets/symbol-defs-870a8e3c.svg#logotype"></use>
@@ -32,26 +43,15 @@
       </button>
     </li>
     <li class="header__item">
-      <a href="#" class="header__link">Наша команда</a>
+      <a href="#team" class="header__link">Наша команда</a>
     </li>
-    <li class="header__item"><a href="#" class="header__link">Контакти</a></li>
+    <li class="header__item"><a href="#footer" class="header__link">Контакти</a></li>
   </ul>
   <ul class="header__lister">
     <li class="header__itm"><div class="header__switcher">
         <div class="header__range"><img class="header__theme" src="data:image/webp;base64,UklGRsgAAABXRUJQVlA4WAoAAAAQAAAADwAADgAAQUxQSIoAAAABgFtt27Lmwd0WcPcVHAagYgEOtbc2gJW+A6VvIEnq1Ok8Kfl+ez+yQkRMAGimwuN9YfvAu1CHMvf1QYwF7UYQWF/DRoQKd0HJNKD7At1UqM5xgcvcR0AQXDxBK9wBT+GV81fJQOnnpECasn2in4wQe9bA/G1ny7EX4lIFRrUZ0L0SyqzQwz/7Kg5WUDggGAAAADABAJ0BKhAADwACADQlpAADcAD++/1QAA==" alt="sun"></div>
     </div></li>
     <li class="header__itm"><p class="header__subtitle">Вітаємо, <span class="header__name">User!</span></p></li>
-  </ul>
-  <ul class="header__interactive">
-    <li class="header__items">
-        <button type="button" class="header__text">Числовий</button>
-    </li>
-        <li class="header__items">
-        <button type="button" class="header__text">Ігровий</button>
-    </li>
-        <li class="header__items">
-        <button type="button" class="header__text">Ознайомчий</button>
-    </li>
   </ul>
 </div>
 </header>
@@ -64,7 +64,7 @@
         <h1 class="title__text">Популярні інетрактивні ігри</h1>
    </div>
  </section>
-        <section class="year">
+        <section class="year" data-category="numerical">
     <div class="container year__box">
     <h2 class="year__subtitle">Перевір в який рік ти народився</h2>
     <label class="year__label">
@@ -81,7 +81,7 @@
     </div>
 </section>
         <!-- pavlo pasichnyk -->
-<section class="number">
+<section class="number" data-category="numerical">
     <div class="container number__box">
     <h2 class="number__title">Вгадай число, яке загадав комп’ютер</h2>
     <div class="number__div">
@@ -96,7 +96,7 @@
     </div>
     </div>
 </section>
-        <section class="container rps">
+        <section class="container rps" data-category="game">
   <h2 class="rps-title">Камінь - ножиці - папір</h2>
   <div class="rps__info">
     <ul class="rps__list">
@@ -132,7 +132,7 @@
   <p class="rps__comp" id="rps__comp">Варіант комп’ютера</p>
 </section>
         <!-- pavlo lesiv -->
-<section class="calc">
+<section class="calc" data-category="numerical">
     <div class="container calc__box">
         <h2 class="calc__title">Калькулятор</h2>
         <div class="calc__div">
@@ -149,7 +149,7 @@
         </div>
     </div>
 </section>
-        <section class="time">
+        <section class="time" data-category="numerical">
     <div class="time__box container">
         <h2 class="time__title">Калькулятор часу</h2>
         <div class="time__div">
@@ -165,12 +165,12 @@
         </div>
     </div>
 </section>
-        <section class="dino">
+        <section class="dino" data-category="game">
   <div class="dino__box container">
     <h2 class="dino__title">Google динозавр</h2>
     </div>
 </section>
-        <section class="container football">
+        <section class="container football" data-category="game">
   <h2 class="football__title">Футбол</h2>
   <div id="football__field" class="football__field">
     <div id="football__ball" class="football__ball">
@@ -187,7 +187,7 @@
     </div>
   </div>
 </section>
-        <section class="maxnumber">
+        <section class="maxnumber" data-category="numerical">
     <div class="container maxnumber__box">
     <h2 class="maxnumber__title">Введіть 3 числа</h2>
     <ul class="maxnumber__list">
@@ -198,7 +198,7 @@
     <p class="maxnumber__subtitle">Найбільше число, яке ви ввели - <span class="maxnumber__number">(число)</span></p>
     </div>
 </section>
-        <section class="container team">
+        <section id="team" class="container team" data-category="acquaintance">
   <h2 class="team__title">Наша команда</h2>
   <div class="team__select" id="team__select">
     <button id="team__left">
@@ -222,7 +222,7 @@
     <span class="team__dot"></span>
   </div>
 </section>
-        <section class="scientists container">
+        <section class="scientists container" data-category="acquaintance">
   <h2 class="scientists__title">Видатні вчені</h2>
 
   <ul class="scientists__grid" id="scientists__grid"></ul>
@@ -243,7 +243,7 @@
       </div>
     </main>
     <!-- pavlo lesiv -->
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="container footer__box">
       <a class="footer__logo" href="../index.html">
     <svg class="footer__icon">
