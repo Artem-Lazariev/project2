@@ -57,9 +57,40 @@ const games = [
     category: 'acquaintance',
   },
 ];
+
+const AlwaysVisibleSection = "title"
+
+function showCategory(category) {
+  const sections = document.querySelectorAll('section');
+
+  const filtered = games.filter(game => game.category === category);
+
+  sections.forEach(section => {
+    const sectionCategory = section.dataset.category;
+    if (section.classList.contains(AlwaysVisibleSection)) {
+      section.style.display = '';
+      return;
+    }
+
+    if (filtered.some(game => game.category === sectionCategory)) {
+      section.style.display = '';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+
+document.querySelectorAll('.header__text').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const category = btn.dataset.category;
+    showCategory(category);
+  });
+});
 btnRef.addEventListener('click', evt => {
   listRef.classList.toggle('open');
 });
+
+
 switchRef.addEventListener('click', evt => {
   rangeRef.classList.toggle('active');
   if (rangeRef.classList.contains('active')) {
