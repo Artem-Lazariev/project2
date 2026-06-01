@@ -197,9 +197,6 @@ body {
   transform: translateX(20px);
   background-color: #000;
 }
-.active .header__theme {
-  fill: #FFF;
-}
 
 .open {
   display: flex;

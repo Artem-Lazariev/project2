@@ -86,12 +86,11 @@ document.querySelectorAll('.header__text').forEach(btn => {
     showCategory(category);
   });
 });
-
-
-
 btnRef.addEventListener('click', evt => {
   listRef.classList.toggle('open');
 });
+
+
 switchRef.addEventListener('click', evt => {
   rangeRef.classList.toggle('active');
   if (rangeRef.classList.contains('active')) {
