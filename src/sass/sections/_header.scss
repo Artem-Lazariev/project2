@@ -121,9 +121,6 @@ height: 15px;
 .active{
     transform: translateX(20px);
     background-color: $text-color;
-    .header__theme{
-        fill: $main-color;
-    }
 }
 .open{
     display:flex;
