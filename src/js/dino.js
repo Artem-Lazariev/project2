@@ -114,7 +114,7 @@ function checkCollision() {
     if (obstaclePixels.has(p)) {
       gameOver = true;
       alert("💀 Game Over");
-      window.location = "../index.html";
+      window.location.reload()
       return;
     }
   }
