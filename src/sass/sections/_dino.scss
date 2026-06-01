@@ -21,7 +21,44 @@
         color: $text-color;
         font-size: 16px;
         font-weight: 400;
-
+        margin-bottom: 36px;
     }
+  &__button {
+    padding: 10px;
+    background: $text-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 20px;
+    color: $main-color;
+  }
 }
-   
+.row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+
+.dot {
+  position: relative;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.dot_A {
+  position: relative;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  background: black;
+}
+
+.obstacle {
+
+  position: relative;
+  z-index: 1;
+  background: black;
+}
+

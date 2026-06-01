@@ -6,3 +6,4 @@ import './js/calc';
 import './js/football.js';
 import './js/team.js';//
 import './js/scientists.js';//
+import './js/dino.js'
