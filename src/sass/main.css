@@ -783,6 +783,7 @@ body {
 
 .scientists {
   margin-top: 36px;
+  margin-bottom: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -895,9 +896,6 @@ body {
   margin-top: 4px;
   font-size: 10px;
   color: #666;
-}
-.scientist__card {
-  padding-bottom: 36px;
 }
 
 .footer {
