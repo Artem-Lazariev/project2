@@ -7,4 +7,4 @@ import './js/football';
 import './js/team';
 import './js/scientists';
 import './js/time';
-import './js/dino.js
+import './js/dino';
