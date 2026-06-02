@@ -21,7 +21,7 @@ padding-top: 36px;
         color: $text-color;
         font-size: 16px;
         font-weight: 400;
-        
+        margin-bottom: 36px;
     }
     &__game {
         background-image: url(/img/trex-bg.png);
@@ -65,6 +65,7 @@ height: 241px;
     font-size: 12px;
     line-height: 1;
     text-align: center;
+    margin-top: 36px;
   }
    @keyframes block {
   0% {
