@@ -1,16 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Magic</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
     
-
     <script type="module" crossorigin src="/project2/commonHelpers.js"></script>
     <link rel="stylesheet" href="/project2/assets/index-81578d6b.css">
   </head>
@@ -61,7 +70,7 @@
         <!-- pavlo lesiv -->
  <section class="title">
    <div class="container title__box">
-        <h1 class="title__text">Популярні інетрактивні ігри</h1>
+        <h1 data-aos="flip-down" class="title__text">Популярні інетрактивні ігри</h1>
    </div>
  </section>
         <section class="year" data-category="numerical">
@@ -134,18 +143,18 @@
         <!-- pavlo lesiv -->
 <section class="calc" data-category="numerical">
     <div class="container calc__box">
-        <h2 class="calc__title">Калькулятор</h2>
+        <h2 data-aos="fade-down"  class="calc__title">Калькулятор</h2>
         <div class="calc__div">
-        <input id="num1" class="calc__number" placeholder="Введіть число" type="number">
-        <ul class="calc__list">
+        <input data-aos="flip-right" id="num1" class="calc__number" placeholder="Введіть число" type="number">
+        <ul data-aos="flip-up" class="calc__list">
             <li class="calc__item"><button id="plus" type="button" class="calc__operation">+</button></li>
             <li class="calc__item"><button id="umltiplate" type="button" class="calc__operation">*</button></li>
             <li class="calc__item"><button id="minus" type="button" class="calc__operation">-</button></li>
             <li class="calc__item"><button id="divadet" type="button" class="calc__operation">/</button></li>
         </ul>
-        <input id="num2" class="calc__number" placeholder="Введіть число" type="number">
-        <button id="res" type="button" class="calc__operation">=</button>
-        <p class="calc__result">Результат</p>
+        <input data-aos="flip-left" id="num2" class="calc__number" placeholder="Введіть число" type="number">
+        <button data-aos="flip-down" id="res" type="button" class="calc__operation">=</button>
+        <p data-aos="zoom-in" class="calc__result">Результат</p>
         </div>
     </div>
 </section>
@@ -194,13 +203,13 @@
 </section>
         <section class="maxnumber" data-category="numerical">
     <div class="container maxnumber__box">
-    <h2 class="maxnumber__title">Введіть 3 числа</h2>
-    <ul class="maxnumber__list">
+    <h2 data-aos="fade-down" class="maxnumber__title">Введіть 3 числа</h2>
+    <ul data-aos="zoom-in" class="maxnumber__list">
         <li class="maxnumber__item"><input required type="number" placeholder="Введіть число" class="maxnumber__input"></li>
         <li class="maxnumber__item"><input required type="number" placeholder="Введіть число" class="maxnumber__input"></li>
         <li class="maxnumber__item"><input required type="number" placeholder="Введіть число" class="maxnumber__input"></li>
     </ul>
-    <p class="maxnumber__subtitle">Найбільше число, яке ви ввели - <span class="maxnumber__number">(число)</span></p>
+    <p data-aos="fade-up" class="maxnumber__subtitle">Найбільше число, яке ви ввели - <span class="maxnumber__number">(число)</span></p>
     </div>
 </section>
         <section id="team" class="container team" data-category="acquaintance">
@@ -296,5 +305,9 @@
 </button>
 </section>
     
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
