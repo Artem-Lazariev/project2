@@ -1,7 +1,7 @@
 @use "../base/var" as *;
 
 .dino {
-padding-top: 36px;
+    padding-top: 36px;
     &__box {
         display: flex;
         align-items: center;
@@ -28,9 +28,10 @@ padding-top: 36px;
         background-repeat: repeat;
         background-size: contain;
         background-position: center;
-width: 720px;
-height: 241px;
-  margin: auto;
+        width: 720px;
+        height: 241px;
+        margin: auto;
+        position: relative;
 }
 
 &__sprite {
@@ -97,7 +98,16 @@ height: 241px;
     top: 150px;
   }
 }
-
+&__score{
+  position: absolute;
+  color: $input-color;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: normal;
+  left: calc(720px - 81px);
+  top: 0px;
+  font-family: 'Press Start 2P', cursive;
+}
 }
 .jump {
   animation: jump 0.5s linear;
