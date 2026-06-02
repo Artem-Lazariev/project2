@@ -9,7 +9,7 @@ import cardImg4 from "../img/card4.jpg";
 const team__images = [cardImg1, cardImg2, cardImg3, cardImg4];
 
 let team__names = ["Artem-lazariev", "artem Kaliushko","pavlo pasichnyk","pavlo lesiv"];
-let team__text = ["team,scientists,rps,football", "modul,Перевір в який рік ти народився,",", Вгадай число, яке загадав комп’ютер, Google динозавр,Калькулятор часу","heder, Калькулятор, Введіть 3 числа, Footer,Популярні інетрактивні ігри"];
+let team__text = ["team,scientists,rps,football,Google динозавр", "modul,Перевір в який рік ти народився","Вгадай число, яке загадав комп’ютер,Калькулятор часу","heder, Калькулятор, Введіть 3 числа, Footer,Популярні інетрактивні ігри"];
 let cards =4;
 let card = 1;
 
