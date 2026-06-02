@@ -624,6 +624,7 @@ body {
   width: 720px;
   height: 241px;
   margin: auto;
+  position: relative;
 }
 .dino__sprite {
   width: 50px;
@@ -679,6 +680,16 @@ body {
   100% {
     top: 150px;
   }
+}
+.dino__score {
+  position: absolute;
+  color: #7E7E7E;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: normal;
+  left: 639px;
+  top: 0px;
+  font-family: "Press Start 2P", cursive;
 }
 
 .jump {

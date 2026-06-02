@@ -1,6 +1,8 @@
 const dinoRef = document.getElementById('dino');
 const cactusRef = document.getElementById('cactus');
 const btnRef = document.querySelector('.dino__btn');
+
+let score = 0;
 btnRef.addEventListener('click', evt => {
 cactusRef.style.display = "block"
   const jump = () => {
@@ -26,6 +28,9 @@ cactusRef.style.display = "block"
         alert('Схоже ви натрапили на кактус!');
         location.reload();
     }
+    score++;
+
+    document.getElementById("dino__score").innerHTML = ((score - (score % 10))/10).toString().padStart(6, "0");
   }, 10);
 
 document.addEventListener('keydown', evt => {
