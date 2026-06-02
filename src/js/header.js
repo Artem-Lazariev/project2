@@ -5,6 +5,7 @@ const listRef = document.querySelector('.header__interactive');
 const switchRef = document.querySelector('.header__switcher');
 const rangeRef = document.querySelector('.header__range');
 const iconRef = document.querySelector('.header__theme');
+const itemRef = document.querySelectorAll('.header__items');
 const games = [
   {
     id: 1,
@@ -82,6 +83,8 @@ function showCategory(category) {
 
 document.querySelectorAll('.header__text').forEach(btn => {
   btn.addEventListener('click', () => {
+    itemRef.forEach((item) => item.classList.remove('isActive'));
+    btn.closest('.header__items').classList.add('isActive');
     const category = btn.dataset.category;
     showCategory(category);
   });
