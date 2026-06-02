@@ -9,7 +9,7 @@ cactusRef.style.display = "block"
 
       setTimeout(function () {
         dinoRef.classList.remove('jump');
-      }, 300);
+      }, 500);
     }
   };
 
