@@ -21,44 +21,85 @@ padding-top: 36px;
         color: $text-color;
         font-size: 16px;
         font-weight: 400;
-        margin-bottom: 36px;
+        
     }
-  &__button {
-    padding: 10px;
-    background: $text-color;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: normal;
+    &__game {
+        background-image: url(/img/trex-bg.png);
+        background-repeat: repeat;
+        background-size: contain;
+        background-position: center;
+width: 720px;
+height: 241px;
+  margin: auto;
+}
+
+&__sprite {
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+
+&__cactus {
+    display: none;
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-size: 20px 40px;
+
+  animation: block 1s infinite linear;
+
+
+}
+  &__btn{
+        border: none;
+    cursor: pointer;
     border-radius: 20px;
+    background-color: $text-color;
+    padding: 10px 20px;
     color: $main-color;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+  }
+   @keyframes block {
+  0% {
+    left: 580px;
+  }
+
+  100% {
+    left: -20px;
   }
 }
-.row {
-  position: relative;
-  z-index: 1;
-  display: flex;
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+
+  30% {
+    top: 130px;
+  }
+
+  50% {
+    top: 80px;
+  }
+
+  80% {
+    top: 130px;
+  }
+
+  100% {
+    top: 150px;
+  }
 }
 
-
-.dot {
-  position: relative;
-  z-index: 1;
-  width: 10px;
-  height: 10px;
+}
+.jump {
+  animation: jump 0.3s linear;
 }
 
-.dot_A {
-  position: relative;
-  z-index: 1;
-  width: 10px;
-  height: 10px;
-  background: black;
-}
-
-.obstacle {
-
-  position: relative;
-  z-index: 1;
-  background: black;
-}
 
