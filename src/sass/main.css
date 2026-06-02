@@ -193,6 +193,13 @@ body {
   align-items: center;
 }
 
+.isActive {
+  background-color: #F1F1F1;
+}
+.isActive:last-child {
+  border-radius: 0 0 20px 20px;
+}
+
 .active {
   transform: translateX(20px);
   background-color: #000;
