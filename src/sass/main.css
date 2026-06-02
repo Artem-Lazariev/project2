@@ -81,7 +81,6 @@ body {
   width: 1090px;
   padding: 0 10px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 .header {
@@ -610,42 +609,6 @@ body {
   font-weight: 400;
   margin-bottom: 36px;
 }
-.dino__button {
-  padding: 10px;
-  background: #000;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
-  border-radius: 20px;
-  color: #FFF;
-}
-
-.row {
-  position: relative;
-  z-index: 1;
-  display: flex;
-}
-
-.dot {
-  position: relative;
-  z-index: 1;
-  width: 10px;
-  height: 10px;
-}
-
-.dot_A {
-  position: relative;
-  z-index: 1;
-  width: 10px;
-  height: 10px;
-  background: black;
-}
-
-.obstacle {
-  position: relative;
-  z-index: 1;
-  background: black;
-}
 .dino__game {
   background-image: url(/img/trex-bg.png);
   background-repeat: repeat;
@@ -683,6 +646,7 @@ body {
   font-size: 12px;
   line-height: 1;
   text-align: center;
+  margin-top: 36px;
 }
 @keyframes block {
   0% {
@@ -946,7 +910,8 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 8px;
   left: 50%;
@@ -1045,6 +1010,4 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
