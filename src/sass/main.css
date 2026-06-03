@@ -681,6 +681,16 @@ body {
     top: 150px;
   }
 }
+.dino__best {
+  position: absolute;
+  color: #7E7E7E;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: normal;
+  left: 459px;
+  top: 0px;
+  font-family: "Press Start 2P", cursive;
+}
 .dino__score {
   position: absolute;
   color: #7E7E7E;

@@ -1,62 +1,65 @@
 @use "../base/var" as *;
 
 .dino {
-    padding-top: 36px;
-    &__box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+  padding-top: 36px;
 
-         &::after {
-            content: "";
-            height: 1px;
-            width: 536px;
-            background-color: $text-color;
-            margin-top: 36px;
-        }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 536px;
+      background-color: $text-color;
+      margin-top: 36px;
     }
+  }
 
-    &__title {
-        color: $text-color;
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 36px;
-    }
-    &__game {
-        background-image: url(/img/trex-bg.png);
-        background-repeat: repeat;
-        background-size: contain;
-        background-position: center;
-        width: 720px;
-        height: 241px;
-        margin: auto;
-        position: relative;
-}
+  &__title {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 36px;
+  }
 
-&__sprite {
-  width: 50px;
-  height: 50px;
-  background-size: 50px 50px;
-  position: relative;
-  top: 150px;
-}
+  &__game {
+    background-image: url(/img/trex-bg.png);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    width: 720px;
+    height: 241px;
+    margin: auto;
+    position: relative;
+  }
 
-&__cactus {
+  &__sprite {
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+  }
+
+  &__cactus {
     display: none;
-  width: 20px;
-  height: 40px;
-  position: relative;
-  top: 110px;
-  left: 580px;
-  background-size: 20px 40px;
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    background-size: 20px 40px;
 
-  animation: block 1s infinite linear;
+    animation: block 1s infinite linear;
 
 
-}
-  &__btn{
-        border: none;
+  }
+
+  &__btn {
+    border: none;
     cursor: pointer;
     border-radius: 20px;
     background-color: $text-color;
@@ -68,46 +71,59 @@
     text-align: center;
     margin-top: 36px;
   }
-   @keyframes block {
-  0% {
-    left: 580px;
+
+  @keyframes block {
+    0% {
+      left: 580px;
+    }
+
+    100% {
+      left: -20px;
+    }
+  }
+  @keyframes jump {
+    0% {
+      top: 150px;
+    }
+
+    20% {
+      top: 130px;
+    }
+
+    40% {
+      top: 100px;
+    }
+
+    60% {
+      top: 130px;
+    }
+
+    100% {
+      top: 150px;
+    }
   }
 
-  100% {
-    left: -20px;
-  }
-}
-@keyframes jump {
-  0% {
-    top: 150px;
-  }
-
-  20% {
-    top: 130px;
+  &__best {
+    position: absolute;
+    color: $input-color;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: normal;
+    left: calc(720px - 81px - 30px - 150px);
+    top: 0px;
+    font-family: 'Press Start 2P', cursive;
   }
 
-  40% {
-    top: 100px;
-  }
-
-  60% {
-    top: 130px;
-  }
-
-  100% {
-    top: 150px;
-  }
-}
-&__score{
-  position: absolute;
-  color: $input-color;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: normal;
-  left: calc(720px - 81px);
-  top: 0px;
-  font-family: 'Press Start 2P', cursive;
-}
+  &__score {
+    position: absolute;
+    color: $input-color;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: normal;
+    left: calc(720px - 81px);
+    top: 0px;
+    font-family: 'Press Start 2P', cursive;
+  }//t
 }
 .jump {
   animation: jump 0.5s linear;
