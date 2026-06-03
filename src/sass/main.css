@@ -142,12 +142,6 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-.header__items:is(:hover, :focus) {
-  background-color: #F1F1F1;
-}
-.header__items:is(:hover, :focus):last-child {
-  border-radius: 0 0 20px 20px;
-}
 .header__subtitle {
   color: #000;
   text-align: right;
@@ -191,13 +185,6 @@ body {
   gap: 51px;
   justify-content: center;
   align-items: center;
-}
-
-.isActive {
-  background-color: #F1F1F1;
-}
-.isActive:last-child {
-  border-radius: 0 0 20px 20px;
 }
 
 .active {
