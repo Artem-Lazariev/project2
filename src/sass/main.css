@@ -909,6 +909,10 @@ body {
 }
 .team__title {
   margin-bottom: 16px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
 }
 .team__select {
   display: flex;
