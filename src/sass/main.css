@@ -60,6 +60,7 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: #EEE;
 }
 
 .box {
@@ -67,7 +68,12 @@ main {
   background-color: #FFF;
 }
 
+.container > section.last-in-category ~ .container::after {
+  content: none;
+}
+
 body {
+  scroll-behavior: smooth;
   font-family: "Montserrat Alternates";
 }
 
@@ -114,6 +120,7 @@ body {
   line-height: normal;
 }
 .header__interactive {
+  z-index: 1;
   background-color: #FFF;
   position: absolute;
   top: 30px;
@@ -186,12 +193,16 @@ body {
   align-items: center;
 }
 
+.isActive {
+  background-color: #F1F1F1;
+}
+.isActive:last-child {
+  border-radius: 0 0 20px 20px;
+}
+
 .active {
   transform: translateX(20px);
   background-color: #000;
-}
-.active .header__theme {
-  fill: #FFF;
 }
 
 .open {
@@ -356,6 +367,33 @@ body {
   fill: #FFF;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+  }
+}
 .rps {
   display: flex;
   flex-direction: column;
@@ -364,6 +402,7 @@ body {
   gap: 36px;
   padding-top: 36px;
   position: relative;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 .rps::after {
   content: "";
@@ -395,6 +434,21 @@ body {
   display: flex;
   flex-direction: row;
   gap: 38px;
+  animation: slideInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.rps__list > li > button {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.rps__list > li > button:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+.rps__list > li > button:active {
+  transform: scale(0.95);
 }
 .rps__result {
   display: flex;
@@ -402,12 +456,7 @@ body {
   gap: 5px;
   position: absolute;
   right: 200px;
-}
-.rps__list > li > button {
-  width: 60px;
-  height: 60px;
-  border-radius: 20px;
-  background-color: #000;
+  animation: slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .rps__green {
   color: #039900;
@@ -508,6 +557,28 @@ body {
   flex-basis: calc((100% - 10px) / 2);
 }
 
+@keyframes timeBoxFade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes lineExpand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+.time {
+  padding-top: 36px;
+  animation: timeBoxFade 0.5s ease-out forwards;
+}
 .time__box {
   display: flex;
   align-items: center;
@@ -543,6 +614,14 @@ body {
   left: 115px;
   width: 35px;
   height: 35px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.time__btn:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+.time__btn:active {
+  transform: scale(0.95);
 }
 .time__input {
   padding: 10px;
@@ -554,6 +633,11 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
+  transition: box-shadow 0.2s ease;
+}
+.time__input:focus {
+  outline: none;
+  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.25);
 }
 .time__label {
   position: relative;
@@ -561,11 +645,12 @@ body {
 .time__label::after {
   content: "";
   border: 1px dashed #000;
-  width: 100px;
   height: 0px;
   position: absolute;
   top: 17px;
   left: 200px;
+  width: 0;
+  animation: lineExpand 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
 }
 .time__icon {
   width: 15px;
@@ -580,6 +665,9 @@ body {
   position: relative;
 }
 
+.dino {
+  padding-top: 36px;
+}
 .dino__box {
   display: flex;
   align-items: center;
@@ -597,25 +685,135 @@ body {
   color: #000;
   font-size: 16px;
   font-weight: 400;
+  margin-bottom: 36px;
+}
+.dino__game {
+  background-image: url(/img/trex-bg.png);
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  width: 720px;
+  height: 241px;
+  margin: auto;
+  position: relative;
+}
+.dino__sprite {
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+  position: relative;
+  top: 150px;
+}
+.dino__cactus {
+  display: none;
+  width: 20px;
+  height: 40px;
+  position: relative;
+  top: 110px;
+  left: 580px;
+  background-size: 20px 40px;
+  animation: block 1s infinite linear;
+}
+.dino__btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #000;
+  padding: 10px 20px;
+  color: #FFF;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  margin-top: 36px;
+}
+@keyframes block {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  20% {
+    top: 130px;
+  }
+  40% {
+    top: 100px;
+  }
+  60% {
+    top: 130px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+.dino__best {
+  position: absolute;
+  color: #7E7E7E;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: normal;
+  left: 459px;
+  top: 0px;
+  font-family: "Press Start 2P", cursive;
+}
+.dino__score {
+  position: absolute;
+  color: #7E7E7E;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: normal;
+  left: 639px;
+  top: 0px;
+  font-family: "Press Start 2P", cursive;
 }
 
+.jump {
+  animation: jump 0.5s linear;
+}
+
+@keyframes titleDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fieldPop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .football {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 36px;
   gap: 36px;
 }
 .football__title {
-  /* Layout */
   width: 74px;
   height: 20px;
-  /* Typography */
-  font-family: "Montserrat Alternates", sans-serif; /* Truncated in image, likely Montserrat Alternates */
+  font-family: "Montserrat Alternates", sans-serif;
   font-weight: 400;
-  font-style: normal; /* 'Regular' style maps to normal */
+  font-style: normal;
   font-size: 16px;
   line-height: 100%;
+  animation: titleDown 0.5s ease-out forwards;
 }
 .football__field {
   background-color: #5ABB58;
@@ -624,6 +822,7 @@ body {
   height: 220px;
   border: 2px solid #000;
   position: relative;
+  animation: fieldPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 .football__ball {
   position: absolute;
@@ -645,7 +844,6 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 36px;
-  margin-bottom: 36px;
 }
 .maxnumber__box::after {
   content: "";
@@ -680,6 +878,188 @@ body {
   align-items: center;
   justify-content: center;
   gap: 38px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.team {
+  padding-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+.team__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+.team__select > button {
+  background-color: transparent;
+}
+.team__title {
+  margin-bottom: 16px;
+}
+.team__select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 328px;
+  flex-direction: row;
+}
+.team__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.team__dot {
+  width: 18px;
+  height: 3px;
+  background: #D9D9D9;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.team__dot--active {
+  background-color: #757575;
+  background-image: none;
+  width: 30px;
+  height: 3px;
+}
+.team::after {
+  content: "";
+  height: 1px;
+  width: 536px;
+  background-color: #000;
+}
+
+.scientists {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 36px;
+}
+.scientists__title {
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.scientists__imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 59px;
+  width: 577px;
+  flex-wrap: wrap;
+}
+.scientists__imgs > img {
+  width: 100px;
+  height: 100px;
+}
+.scientists__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px 36px;
+}
+.scientists__buttons > li {
+  flex-basis: calc((100% - 36px) / 2);
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+.scientists__buttons > li:nth-child(2) {
+  justify-content: flex-start;
+}
+.scientists__buttons > li:nth-child(4) {
+  justify-content: flex-start;
+}
+.scientists__buttons > li:nth-child(6) {
+  justify-content: flex-start;
+}
+.scientists__buttons > li:nth-child(8) {
+  justify-content: flex-start;
+}
+.scientists__buttons > li:nth-child(9) {
+  justify-content: center;
+}
+.scientists__button {
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #000;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+}
+.scientists__button:nth-child(9) {
+  max-width: 100px;
+}
+.scientists__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 110px);
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.scientist__card {
+  width: 110px;
+  height: 110px;
+  background: #d9d9d9;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.scientist__card__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #fff;
+}
+.scientist__card__name {
+  margin-top: 30px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+}
+.scientist__card__years {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #666;
 }
 
 .footer {
@@ -761,4 +1141,6 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
