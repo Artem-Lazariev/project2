@@ -1,1 +1,82 @@
 @use "../base/var" as *;
+
+// Оголошуємо анімацію появи
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); // Початкова точка: трохи нижче і прозора
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); // Кінцева точка: на своєму місці
+  }
+}
+
+.team {
+  padding-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+
+  // Запуск анімації: тривалість 0.6 секунди, плавний старт/фініш
+  animation: fadeInUp 0.6s ease-out forwards;
+
+  &__img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+  }
+
+  &__select > button {
+    background-color: transparent;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 328px;
+    flex-direction: row;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__dot {
+    width: 18px;
+    height: 3px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &--active {
+      background-color: #757575;
+      background-image: none;
+      width: 30px;
+      height: 3px;
+    }
+  }
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 536px;
+    background-color: $text-color;
+  }
+}

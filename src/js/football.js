@@ -1,5 +1,5 @@
-const ball = document.getElementById('f__ball');
-const field = document.getElementById('f__field');
+const ball = document.getElementById('football__ball');
+const field = document.getElementById('football__field');
 
 field.addEventListener('click', (event) => {
   const fieldRect = field.getBoundingClientRect();

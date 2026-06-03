@@ -1,1 +1,138 @@
 @use "../base/var" as *;
+
+.scientists {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 36px;
+
+  &__title {
+    color: $text-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+
+  }//scsacs
+
+  &__imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 59px;
+    width: 577px;
+    flex-wrap: wrap;
+  }
+
+  &__imgs > img {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center; // Центруємо ряди кнопок
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; // Дозволяємо кнопкам переноситися
+    gap: 20px 36px; // Вертикальний та горизонтальний відступи// Обмежуємо ширину контейнера, щоб вміщалися рівно дві кнопки в ряд
+  }
+  &__buttons > li {
+
+    flex-basis: calc((100% - 36px) / 2);
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+  }
+  &__buttons > li:nth-child(2) {
+    justify-content: flex-start;
+  }
+  &__buttons > li:nth-child(4) {
+    justify-content: flex-start;
+  }
+
+  &__buttons > li:nth-child(6) {
+    justify-content: flex-start;
+  }
+  &__buttons > li:nth-child(8) {
+    justify-content: flex-start;
+  }
+  &__buttons > li:nth-child(9) {
+    justify-content: center;
+  }
+  &__button {
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: $text-color;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+
+
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+
+    &:nth-child(9) {
+
+      max-width: 100px;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 110px);
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
+.scientist__card {
+  width: 110px;
+  height: 110px;
+  background: #d9d9d9;
+
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  text-align: center;
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 2px solid #fff;
+  }
+
+  &__name {
+    margin-top: 30px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $text-color;
+  }
+
+  &__years {
+    margin-top: 4px;
+    font-size: 10px;
+    color: #666;
+  }
+
+}

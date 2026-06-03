@@ -1,18 +1,130 @@
 @use "../base/var" as *;
+
+// Плаве проявлення всього блоку з легким масштабуванням
+@keyframes timeBoxFade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Анімація для декоративної пунктирної лінії (розгортання вбік)
+@keyframes lineExpand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
 .time {
-  &__subtitle {
-    width: 283px;
-    height: 20px;
+  padding-top: 36px;
+
+  // Додаємо анімацію на весь контейнер
+  animation: timeBoxFade 0.5s ease-out forwards;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::after {
+      content: "";
+      height: 1px;
+      width: 536px;
+      background-color: $text-color;
+      margin-top: 36px;
+    }
+  }
+
+  &__title {
     color: $text-color;
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 36px;
   }
-  &__text{
-    color: $text-color;
-font-size: 12px;
-font-weight: 400;
-line-height: normal;
 
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+    color: $text-color;
+  }
+
+  &__btn {
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    background: $text-color;
+    position: absolute;
+    top: 0;
+    left: 115px;
+    width: 35px;
+    height: 35px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    // Легкий інтерактив для ігрової кнопки
+    &:hover {
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__input {
+    padding: 10px;
+    border-radius: 20px;
+    background: $bg-color;
+    width: 150px;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+    color: $input-color;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    transition: box-shadow 0.2s ease;
+
+    &:focus {
+      outline: none;
+      box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__label {
+    position: relative;
+
+    &::after {
+      content: "";
+      border: 1px dashed $text-color;
+      height: 0px;
+      position: absolute;
+      top: 17px;
+      left: 200px;
+
+      // Анімація пунктирної лінії: стартує трохи пізніше (затримка 0.3s)
+      width: 0; // Початковий стан для анімації
+      animation: lineExpand 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+    }
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: $main-color;
+  }
+
+  &__div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 202px;
+    position: relative;
   }
 }
