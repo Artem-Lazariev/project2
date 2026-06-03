@@ -20,7 +20,7 @@ cactusRef.style.display = "block"
         dinoRef.classList.remove('jump');
       }, 500);
     }
-  };
+  };//
   let isAlive = setInterval(() => {
     let dinoTop = parseInt(
       window.getComputedStyle(dinoRef).getPropertyValue('top')
