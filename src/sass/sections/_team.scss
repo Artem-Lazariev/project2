@@ -1,5 +1,17 @@
 @use "../base/var" as *;
 
+// Оголошуємо анімацію появи
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); // Початкова точка: трохи нижче і прозора
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); // Кінцева точка: на своєму місці
+  }
+}
+
 .team {
   padding-top: 36px;
   display: flex;
@@ -7,16 +19,26 @@
   align-items: center;
   gap: 20px;
   flex-direction: column;
-  &__img{
+
+  // Запуск анімації: тривалість 0.6 секунди, плавний старт/фініш
+  animation: fadeInUp 0.6s ease-out forwards;
+
+  &__img {
     width: 150px;
     height: 150px;
     border-radius: 20px;
   }
+
   &__select > button {
     background-color: transparent;
   }
+
   &__title {
     margin-bottom: 16px;
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
   }
 
   &__select {
