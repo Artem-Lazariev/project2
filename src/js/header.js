@@ -178,7 +178,7 @@ switchRef.addEventListener('click', evt => {
     textCalcRef.style.color = '#7E7E7E';
     listRef.style.border = '1px solid white';
     listRef.style.borderTop = 'none';
-    modalRef.style.backgroundColor = '#7E7E7E';
+    modalRef.style.backgroundColor = '#484848';
   } else {
     iconRef.src = sun;
     imgsRef.src = imgRef;
