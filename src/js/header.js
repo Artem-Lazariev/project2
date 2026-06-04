@@ -28,6 +28,7 @@ const textRpsRef = document.querySelector('.rps__comp');
 const textCalcRef = document.querySelector('.calc__result');
 const searchRef = document.querySelectorAll('#search');
 const logoerRef = document.querySelector('.footer__icon');
+const modalRef = document.querySelector(".thanks");
 const games = [
   {
     id: 1,
@@ -177,6 +178,7 @@ switchRef.addEventListener('click', evt => {
     textCalcRef.style.color = '#7E7E7E';
     listRef.style.border = '1px solid white';
     listRef.style.borderTop = 'none';
+    modalRef.style.backgroundColor = '#7E7E7E';
   } else {
     iconRef.src = sun;
     imgsRef.src = imgRef;
@@ -207,5 +209,6 @@ switchRef.addEventListener('click', evt => {
     });
     listRef.style.border = '1px solid black';
     listRef.style.borderTop = 'none';
+    modalRef.style.backgroundColor = "white"
   }
 });
