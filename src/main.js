@@ -8,3 +8,5 @@ import './js/team';
 import './js/scientists';
 import './js/time';
 import './js/dino';
+import './js/football.js';
+import './js/year';

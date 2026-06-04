@@ -354,6 +354,33 @@ body {
   fill: #FFF;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+  }
+}
 .rps {
   display: flex;
   flex-direction: column;
@@ -362,6 +389,7 @@ body {
   gap: 36px;
   padding-top: 36px;
   position: relative;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 .rps::after {
   content: "";
@@ -393,6 +421,21 @@ body {
   display: flex;
   flex-direction: row;
   gap: 38px;
+  animation: slideInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.rps__list > li > button {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.rps__list > li > button:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+.rps__list > li > button:active {
+  transform: scale(0.95);
 }
 .rps__result {
   display: flex;
@@ -400,12 +443,7 @@ body {
   gap: 5px;
   position: absolute;
   right: 200px;
-}
-.rps__list > li > button {
-  width: 60px;
-  height: 60px;
-  border-radius: 20px;
-  background-color: #000;
+  animation: slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 .rps__green {
   color: #039900;
@@ -506,8 +544,27 @@ body {
   flex-basis: calc((100% - 10px) / 2);
 }
 
+@keyframes timeBoxFade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes lineExpand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
 .time {
   padding-top: 36px;
+  animation: timeBoxFade 0.5s ease-out forwards;
 }
 .time__box {
   display: flex;
@@ -544,6 +601,14 @@ body {
   left: 115px;
   width: 35px;
   height: 35px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.time__btn:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+.time__btn:active {
+  transform: scale(0.95);
 }
 .time__input {
   padding: 10px;
@@ -555,6 +620,11 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
+  transition: box-shadow 0.2s ease;
+}
+.time__input:focus {
+  outline: none;
+  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.25);
 }
 .time__label {
   position: relative;
@@ -562,11 +632,12 @@ body {
 .time__label::after {
   content: "";
   border: 1px dashed #000;
-  width: 100px;
   height: 0px;
   position: absolute;
   top: 17px;
   left: 200px;
+  width: 0;
+  animation: lineExpand 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
 }
 .time__icon {
   width: 15px;
@@ -611,6 +682,7 @@ body {
   width: 720px;
   height: 241px;
   margin: auto;
+  position: relative;
 }
 .dino__sprite {
   width: 50px;
@@ -654,24 +726,64 @@ body {
   0% {
     top: 150px;
   }
-  30% {
+  20% {
     top: 130px;
   }
-  50% {
-    top: 80px;
+  40% {
+    top: 100px;
   }
-  80% {
+  60% {
     top: 130px;
   }
   100% {
     top: 150px;
   }
 }
-
-.jump {
-  animation: jump 0.3s linear;
+.dino__best {
+  position: absolute;
+  color: #7E7E7E;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: normal;
+  left: 459px;
+  top: 0px;
+  font-family: "Press Start 2P", cursive;
+}
+.dino__score {
+  position: absolute;
+  color: #7E7E7E;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: normal;
+  left: 639px;
+  top: 0px;
+  font-family: "Press Start 2P", cursive;
 }
 
+.jump {
+  animation: jump 0.5s linear;
+}
+
+@keyframes titleDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fieldPop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .football {
   display: flex;
   align-items: center;
@@ -688,6 +800,7 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 100%;
+  animation: titleDown 0.5s ease-out forwards;
 }
 .football__field {
   background-color: #5ABB58;
@@ -696,6 +809,7 @@ body {
   height: 220px;
   border: 2px solid #000;
   position: relative;
+  animation: fieldPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 .football__ball {
   position: absolute;
@@ -753,6 +867,16 @@ body {
   gap: 38px;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .team {
   padding-top: 36px;
   display: flex;
@@ -760,6 +884,7 @@ body {
   align-items: center;
   gap: 20px;
   flex-direction: column;
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 .team__img {
   width: 150px;
@@ -771,6 +896,10 @@ body {
 }
 .team__title {
   margin-bottom: 16px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
 }
 .team__select {
   display: flex;
@@ -904,8 +1033,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   top: 8px;
   left: 50%;
@@ -1004,4 +1132,6 @@ body {
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

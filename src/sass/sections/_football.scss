@@ -1,34 +1,69 @@
 @use "../base/var" as *;
-.football{
+
+// Анімація для заголовка (м'яке опускання зверху)
+@keyframes titleDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Анімація для поля (ефект розгортання та масштабування)
+@keyframes fieldPop {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.football {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding-top: 36px;
   gap: 36px;
+
   &__title {
     width: 74px;
     height: 20px;
-
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
     line-height: 100%;
+
+    // Поява заголовка
+    animation: titleDown 0.5s ease-out forwards;
   }
-  &__field{
+
+  &__field {
     background-color: #5ABB58;
     border-radius: 37px;
     width: 720px;
     height: 220px;
     border: 2px solid #000;
     position: relative;
+
+    // Поява поля: трохи збільшується і стає видимим
+    animation: fieldPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
-  &__ball{
+
+  &__ball {
     position: absolute;
+    // Твій transition залишаємо для плавних ударів/переміщень м'яча під час гри
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
-  &::after{
+
+  &::after {
     content: "";
     height: 1px;
     width: 536px;
