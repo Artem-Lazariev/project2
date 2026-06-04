@@ -1,1 +1,73 @@
 @use "../base/var" as *;
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+
+
+
+.thanks {
+padding: 83px 137px 138px 138px;
+border-radius: 20px;
+background: $main-color;
+  top: 50%;
+  left: 50%;
+width: 463px;
+height: 245px;
+  transform: translate(-50%, -50%);
+position: relative;
+  &__subtitle {
+    color: $text-color;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: normal;
+  }
+
+  &__icon{
+    fill: $text-color;
+    width: 15px;
+height: 15px;
+  }
+  &__btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    padding: 0;
+  }
+  &__img{
+    width: 30px;
+height: 30px;
+  }
+
+  &__item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    &:nth-child(1){
+        top: 69px;
+        left: 43px;
+    }
+    &:nth-child(2){
+        top: 145px;
+        left: 87px;
+    }
+        &:nth-child(3){
+            top: 69px;
+            left: 391px;
+        }
+        &:nth-child(4){
+            top: 145px;
+            left: 347px;
+        }
+  }
+}
