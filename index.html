@@ -15,7 +15,7 @@
     
     
     <script type="module" crossorigin src="/project2/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project2/assets/index-80c7db1b.css">
+    <link rel="stylesheet" href="/project2/assets/index-6698e43f.css">
   </head>
   <body>
     <!-- Loads the specified .html file -->
@@ -273,22 +273,31 @@
 </div>
 </div>
 </footer>
-    <section class="menu">
+    <div class="backdrops">
+    <div class="menu">
     <h2 class="menu__subtitle">Привіт!
 Ви потрапили на сайт інтерактивних ігор та завдань
 Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
 Бажаємо Вам гарно провести час!</h2>
     <label class="menu__label">
+                Введіть своє ім’я:
         <input type="text" class="menu__input" placeholder="Ваше ім’я...">
         <button  class="menu__btn">Зберегти</button>
-        Введіть своє ім’я:
+
     </label>
 <button class="menu__button" type="button">
       <svg class="menu__icon">
       <use href="/project2/assets/symbol-defs-7256eb15.svg#hrestik"></use>
     </svg>
 </button>
-</section>
+<ul class="menu__list">
+  <li class="menu__item"><img class="menu__img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAWFJREFUeAHtlj1OAzEUhAcSskANEgfgKlR0iA6RSByBHokGBJegSiDkSoggaGmgQpAs4o38rDirXdif5xTASJOVHet9Hjt2FvhrWoK9WPNc/J7pb2n/Gxtt2CsVv4qnwUTWxWvaPuHHMmz1KX4Ub4g3xVviY3FHJ5T6gZZgD91WAJf2QHwlPhK/IIIIfVAY9NmFW+6utp/FpzBUGSiswYSOS0D5/BCfwUBlk/J5r+P/oYVaFe8Gxars6Rg1oYl4Ancm91EtaW1oWwuO4C4BFnnC7IqNAqUSLXqtMBZn8h7c9deLAfUigGfvNgO/jAn18smz8AudWDQoEw+Qn5zLvQLDcxpCh3D/p0XLfhcT6pUHJ3QPs702h0Lbfczv+SFc8h000E/QG/3ejxtp30T7aotJ+gXQocL8L7mj46dBXy3xFShM9B3Uq4WGSfMgCeaXt1GqqvDBoqAhnEnTRUJD+O/UF8m+iCHJlqbHAAAAAElFTkSuQmCC" alt="міч"></li>
+  <li class="menu__item"><img class="menu__img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAzVJREFUeAHNVl9IU1EYP7v70/7opntwU5mCTkxxw0w29EULH0JZe1IqIogIl88SltnWg9BeepOCKIgsai8xA4NeohCfIhRB0SCDxBgLdDLddGu33zHvWHe76b1u6A8u997vnvP9vu+e7/y+Q0iewLKsvKurq6GoqOinXC5PGAyGHyMjIzZqJ4WEx+NxyGQydmBgwELfx8bGrDQeBHOKFBipQCBgzjSMjo6aGIaJIWsZKSBYMXYFkYCJiQmt1+u9oFAodp1Go9HYwsICOzk5qe/u7t7gxk1PT2va29uJ0+m8nEqllJw9FottSiIG6VAoFDpvNpu/0HeNRkOam5tf6PX6f7JbXFw80dLSMp5IJM5ytu3t7a35+fkbRApA4rXb7T4iHSxDjgiCxJmVWIiqZIRIy8rKXpG/FcnW1taO84VgZ2dH39PTc83v9zfsFxi+7/K4XC53b2/vOaFB1MlmSUnJM85WXl7+GBUc4Rw4HI6bKKhwfX39U7xGcG1x33L5q6qq6qOPJpPpfU1NzVvs7d9ZAwcHB51wusKPWKfTrXR2dp7knHFZ0rvRaHyCQD/9J3OWPy8LjY2N3qamJi/fjkr22Wy2u0QYOYUCc/qR5XO+XdHR0XFRqVSqOcP6+jpZWlq6hMd7aY+IsqKiwoXM3kB7r3J2/DLG5/O9bGtri0Onc/ESrVZbjPlrfDsdncJaPUJHSZMjkNDs7OwtHvGD0tJSQ+ZcBGlHEb6bmZmJog76VldXT9NGkUkQDAaL3W73Bl0u/jchjRUEAvCgYD5ardbXyGiNOhRaO0qoVquH6aPFYhlubW29TaQKSHV1tUmlUoXwlzaxVNehw1nZcIA9BW32T01N6VGgRoxVpYMiInEkkkl/XTgcltRcMiHKAVUv/OJfyWRSh050hxwCtCDYvft+pExdXV0wEol8RztcmZubu08kgq77rk8Rc9IKRPIA0cT5gKjiwrp+raysHM7sVIfJ/sBZUBK6X7GPP0A6r+AM/Rmdqp9IgKiMKSkEQAGZfLi8vHwGHelbPB43EwkQvR9BTntpgF7oYj4iEcfvzHUQQKuTRCrQUhNk72wl9qJrjoPDEJGAP7ZpW5CO+P3HAAAAAElFTkSuQmCC" alt="пізл"></li>
+  <li class="menu__item"><img class="menu__img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAidJREFUeAG1VstKxDAUPa0VnJWrmYX+gTtBxLU/4E+4EpSR0Y2I41bdCn6FC1FBFFeKMIgblwoq+MKVD1DxNfVemtBMmrRNZ+bAoe1N7j3JzU0aIMIjMewSb2HBHXHSYPfQGXDsZ1O8UHnWBHWbC6S/pKphFNbRqRkbNQLiD+zinUITeUbTBSQ0fGTD054mm/OyZAlzwDJaCwVIbpkyCoinFVdFtFfQGrhK3EI08LKlT6ZG6CjqCXuP8p0lnls4LdAY8QnpA83UsK1x2npxiidS2pvICVuqTbPuETY99bZlSdNILS5VnLPDs606ijoL64FtfbNEUURYH4R8epY2m0+hkwuaMwdbRFRE8gBZQ7y91Nirol32rct+AdzATg/EG2KJ+CXsu8QXMQBfCM0TG8Re4q8Y8BFxijigziQPFojHiFNYQ5z6A+IZcZl4TtxBnNE5pd+p+HYSDtG6xqpvgGQRmvr1Ed90Yx5hhrxlfCC+pej14sN+mwnVYHmFA+2boWYh7QDx2hHeV4TU+5htdmo/zsJ2UWGu6k2YLwb6uw6u/nuO47KPJXgr7Gm2BuI9re7vE8Rr7wm/Qen0h/wwZWcc0YXRdJq9EkdNcbhQZkXAJSRPHxWfBhvP5hDR3q0b2jcQZcOHNmg2rBOHEP/ybDSdcjPEa/Fu8uGT7ZI4jTYuhowr4opw7ke+wpRXpZJ452O1AUfII48DvROHkT0Dbh8hfgu/C7b9A0J7w/PFu0h0AAAAAElFTkSuQmCC" alt="гіме"></li>
+  <li class="menu__item"><img class="menu__img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAYFJREFUeAHlV71OwzAQ/hwQEhsw0gnEyosw8xYwwASvwIAQj8C7sMCGBBMsCImhCxILRQmBu/hMbZqEXmJ3aE/6FF/t83d/cWMAyAgHhBHhOzFywinBQAYFoVRu8iXQkhcSaOUF/7AJnbiNNDKQAEfGMzbQSS+7DHGFnTgjDAmPhH20ONYlZU12rPu9wvW8QRjgr10MYo7qTvRnwhphF+MG3EtF7Ot+dNueM8G62DVmKb3xUJ6rfxfFIuZUf8BGcyw6417mr+qMYqV6C7aZCm/ONVqy5mJZIuwg7OonTL5O1dzcHCBTy7I8XXo04qdUa5e5iLvUmEWb5sBwsWrcRGwansmJb2EP93VZw6dSiRkQX8PWgs/aN8KKOBI18rpXgh069+beMelk7xOviThH+Ie+gTDiJMQvsDVlwkuMv0JrN4hJfER4hY2ccUF4wAwiNv/oTXZTE2ctk216b2HiT9l4gPTiOLhnquuE/9WgucJo7VzDnjCxkUHegVwLvhgeErIfwbj/wnhahDIAAAAASUVORK5CYII=" alt="тіктак"></li>
+</ul>
+</div>
+</div>
     <div class="backdrop is-hidden">
   <div class="thanks">
     <h2 class="thanks__subtitle">Дякую за підписку!</h2>
