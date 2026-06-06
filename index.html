@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Sacramento&display=swap" rel="stylesheet">
     
-
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     
     
@@ -67,17 +70,17 @@
  </section>
         <section class="year" data-category="numerical">
     <div class="container year__box">
-    <h2 class="year__subtitle">Перевір в який рік ти народився</h2>
-    <label class="year__label">
+    <h2 class="year__subtitle"  data-aos="flip-right">Перевір в який рік ти народився</h2>
+    <label data-aos = "fade-up" class="year__label">
       <div class="year__div">
-        <input type="text" class="year__input" placeholder="Введіть рік народження">
+        <input  type="text" class="year__input" placeholder="Введіть рік народження">
       <button class="year__btn" type="button">
         <svg id="search" class="year__icon">
       <use href="/project2/assets/symbol-defs-7256eb15.svg#search"></use>
     </svg>   
     </button>   
     </label>
-    <p class="year__text">Як ти вважаешь ти народився у високосному році?</p>
+    <p class="year__text" data-aos = "fade-down">Як ти вважаешь ти народився у високосному році?</p>
     </div>
     </div>
 </section>
@@ -273,7 +276,8 @@
 </div>
 </div>
 </footer>
-    <div class="backdrops">
+    
+<div class="backdrops">
     <div class="menu">
     <h2 class="menu__subtitle">Привіт!
 Ви потрапили на сайт інтерактивних ігор та завдань
