@@ -13,8 +13,6 @@ backdropRef.addEventListener("click", (evt) => {
 });
 
 const onEscCloseModal = (evt) => {
-  console.log("evt.key", evt.key);
-  console.log("evt.code", evt.code);
 
   if (evt.key === "Escape") {
     closeModal();

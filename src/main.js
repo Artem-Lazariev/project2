@@ -11,3 +11,4 @@ import './js/dino';
 import './js/football.js';
 import './js/year';
 import './js/thanks';
+import './js/menu';
