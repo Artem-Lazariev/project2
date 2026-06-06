@@ -1,7 +1,7 @@
 const openBtnRef = document.querySelector(".footer__btn");
 const closeBtnRef = document.querySelector(".thanks__btn");
 const backdropRef = document.querySelector(".backdrop");
-
+const inputRef = document.querySelector(".footer__email");
 openBtnRef.addEventListener("click", openModal);
 
 closeBtnRef.addEventListener("click", closeModal);
@@ -20,13 +20,14 @@ const onEscCloseModal = (evt) => {
 };
 
 function openModal(evt) {
-    evt.preventDefault();
+  if (inputRef.value.includes("@") && inputRef.value !== "") {
+      evt.preventDefault();
   backdropRef.style.display = "flex";
   document.addEventListener("keydown", onEscCloseModal);
+  }
 }
 
 function closeModal() {
   backdropRef.style.display = "none";
     document.removeEventListener("keydown", onEscCloseModal);
-    location.reload();
 }

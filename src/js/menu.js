@@ -3,12 +3,12 @@ const closeBtnRef = document.querySelector(".menu__button");
 const backdropRef = document.querySelector(".backdrops");
 const btnRef = document.querySelector(".menu__btn");
 const inputRef = document.querySelector(".menu__input");
-btnRef.addEventListener("click", (evt) => {
 
-    closeModal();
-textRef.textContent = inputRef.value;
+document.addEventListener("keydown", onEscCloseModal);
 
-
+btnRef.addEventListener("click", () => {
+  textRef.textContent = inputRef.value;
+  closeModal();
 });
 
 closeBtnRef.addEventListener("click", closeModal);
@@ -19,14 +19,13 @@ backdropRef.addEventListener("click", (evt) => {
   }
 });
 
-const onEscCloseModal = (evt) => {
-
+function onEscCloseModal(evt) {
   if (evt.key === "Escape") {
     closeModal();
   }
-};
+}
 
 function closeModal() {
   backdropRef.style.display = "none";
-    document.removeEventListener("keydown", onEscCloseModal);
+  document.removeEventListener("keydown", onEscCloseModal);
 }
