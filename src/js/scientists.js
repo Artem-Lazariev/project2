@@ -121,7 +121,7 @@ function createScientists(array) {
 createScientists(scientists);
 
 // Обробник кліків на кнопки
-for (let i = 1; i < 9; i++) {
+for (let i = 1; i < 10; i++) {
   let btn = document.getElementById("team_" + i)
   btn.addEventListener("click", function () {
     createScientists(filterScientists(i));
