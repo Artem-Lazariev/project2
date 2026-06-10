@@ -20,7 +20,7 @@ closeBtnRef.addEventListener("click", closeModal);
 
 backdropRef.addEventListener("click", (evt) => {
   if (evt.target === evt.currentTarget) {
-    closeModal();
+    closeModal();//
   }
 });
 
