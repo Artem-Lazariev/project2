@@ -1,4 +1,4 @@
-// Функція рандому (від 1 до 3)
+// Функція рандому (повертає 1, 2 або 3)
 function num() {
   return Math.floor(Math.random() * 3) + 1;
 }
@@ -9,8 +9,8 @@ let result = document.getElementById('rps__comp');
 let wins = 0;
 let lose = 0;
 
-// Зверни увагу: порядок у масиві має збігатися з порядком кнопок в HTML!
-// 1 - Камінь, 2 - Ножиці, 3 - Папір (відповідно до твоїх іконок в HTML)
+// Важливо: порядок елементів має збігатися з порядком кнопок в HTML:
+// 1 - Камінь, 2 - Ножиці, 3 - Папір
 const names = ["камінь", "ножиці", "папір"];
 
 function pickwiner() {
@@ -22,34 +22,34 @@ function pickwiner() {
   if (numm === pick) {
     // Нічия
     output.innerHTML = 'Нічия!';
-    output.className = "rps__neutral"; // Краще окремий клас для нічиєї
+    output.className = "rps__neutral"; 
   } else if (
     (pick === 1 && numm === 2) || // Камінь б'є Ножиці
     (pick === 2 && numm === 3) || // Ножиці ріжуть Папір
     (pick === 3 && numm === 1)    // Папір обгортає Камінь
   ) {
-    // Виграш гравця
+    // Виграв гравець
     output.innerHTML = 'Ви виграли раунд!';
     output.className = "rps__green";
     wins += 1;
   } else {
-    // Програш гравця
+    // Виграв комп'ютер
     output.innerHTML = 'Комп’ютер виграв раунд!';
     output.className = "rps__red";
     lose += 1;
   }
 
-  // Оновлюємо рахунок на екрані
+  // Оновлення рахунку на сторінці
   document.getElementById('rps__wins').innerHTML = `Ви - ${wins}`;
   document.getElementById('rps__loses').innerHTML = `Комп’ютер - ${lose}`;
 }
 
-// Вибираємо саме кнопки всередині списку
+// ВИПРАВЛЕНО: міняємо селектор, щоб вибирати саме кнопки всередині списку
 let buttons = document.querySelectorAll('.rps__list button');
 
 buttons.forEach((button, index) => {
   button.addEventListener('click', function () {
-    pick = index + 1; // Отримуємо 1, 2 або 3
+    pick = index + 1; // Записуємо 1, 2 або 3 залежно від натиснутої кнопки
     pickwiner();
   });
 });
