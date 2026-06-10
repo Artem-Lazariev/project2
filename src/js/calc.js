@@ -1,5 +1,5 @@
 const inputOneRef = document.querySelector('#num1');
-const inputTwoRef = document.querySelector('#num2');
+const inputTwoRef = document.querySelector('#num2');//
 const btnPlusRef = document.querySelector('#plus');
 const btnMinusRef = document.querySelector('#minus');
 const btnUmltiplateRef = document.querySelector('#umltiplate');
