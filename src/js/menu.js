@@ -7,7 +7,12 @@ const inputRef = document.querySelector(".menu__input");
 document.addEventListener("keydown", onEscCloseModal);
 
 btnRef.addEventListener("click", () => {
-  textRef.textContent = inputRef.value;
+  let name = inputRef.value;
+  if (name.length > 10) {
+    name = name.slice(0, 10) + "...";
+  }
+
+  textRef.textContent = name;
   closeModal();
 });
 
